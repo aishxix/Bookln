@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static' , filename = 'style.css')}}"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <h1>Bookln</h1>
+        <ul class="header-content">
+          <li>
+            <a href="{{url_for('index')}}"><span>Home</span></a>
+          </li>
+          <li>
+            <a href="{{url_for('indoor')}}"><span>Indoor Courts</span></a>
+          </li>
+          <li>
+            <a href="{{url_for('about')}}"><span>About us</span></a>
+          </li>
+          <li>
+            <a href="{{url_for('contact')}}"><span>Contact us</span></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>
