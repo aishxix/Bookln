@@ -29,5 +29,51 @@
         </ul>
       </nav>
     </header>
+
+    <div class="card" style="width: 18rem" data-court="Hasan Court">
+      <img
+        src="https://lh3.googleusercontent.com/p/AF1QipPyFKKpLiL5v3Q7KQ94ew1_AsmfPaKImK6nZevm=s1360-w1360-h1020"
+        class="card-img-top"
+        alt="Hasan Court"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Hasan Court</h5>
+        <p class="card-text">Good court with good grass</p>
+
+        <form action="/book" method="get">
+          <input type="hidden" name="court" value="Hasan Court" />
+          <input type="hidden" name="number" value="923021200598" />
+          <label for="time-select-hasan">Select Time:</label>
+          <select id="time-select-hasan" name="time" class="form-select">
+            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+          </select>
+          <button type="submit" class="btn btn-primary">Book Now</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem" data-court="Raheem Court">
+      <img
+        src="https://lh3.googleusercontent.com/p/AF1QipPyFKKpLiL5v3Q7KQ94ew1_AsmfPaKImK6nZevm=s1360-w1360-h1020"
+        class="card-img-top"
+        alt="Raheem Court"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Raheem Court</h5>
+        <p class="card-text">Good court with better grass</p>
+
+        <form action="/book" method="get">
+          <input type="hidden" name="court" value="Raheem Court" />
+          <input type="hidden" name="number" value="923197926547" />
+          <label for="time-select-raheem">Select Time:</label>
+          <select id="time-select-raheem" name="time" class="form-select">
+            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+          </select>
+          <button type="submit" class="btn btn-primary">Book Now</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

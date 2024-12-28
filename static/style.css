@@ -45,3 +45,81 @@ h1 {
   font-size: 30px;
   list-style: none;
 }
+.card {
+  display: inline-block;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: hidden; /* Prevents overflow of content */
+  transition: transform 0.2s;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+/* Card Image */
+.card-img-top {
+  width: 100%; /* Full width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Card Body */
+.card-body {
+  padding: 16px; /* Padding inside the card */
+  background-color: #f9f9f9; /* Light background color */
+}
+
+/* Card Title */
+.card-title {
+  font-size: 1.25rem; /* Font size for title */
+  margin-bottom: 0.5rem; /* Space below title */
+  color: #333; /* Dark text color */
+}
+
+/* Card Text */
+.card-text {
+  font-size: 1rem; /* Font size for text */
+  color: #666; /* Gray text color */
+  margin-bottom: 1rem; /* Space below text */
+}
+
+/* Button */
+.btn {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding for button */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* No underline */
+  display: inline-block; /* Aligns button properly */
+}
+
+/* Button Hover Effect */
+.btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Card Hover Effect */
+.card:hover {
+  transform: scale(1.05); /* Slightly enlarge card on hover */
+}
+
+/* Style for Select Elements */
+.form-select {
+  width: 100%; /* Full width */
+  padding: 8px; /* Padding inside the select */
+  margin-bottom: 1rem; /* Space below select */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #fff; /* White background */
+}
+
+/* Style for Labels */
+label {
+  font-weight: bold; /* Bold text for labels */
+  margin-bottom: 0.5rem; /* Space below label */
+  display: block; /* Block display for labels */
+}
