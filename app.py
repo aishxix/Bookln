@@ -31,7 +31,7 @@ def book_now():
 
 
     message = f"Hello! I would like to book the {court_name} for the {time_slot} slot. Can you confirm the availability and price?"
-    encoded_message = urllib.parse.quote(message)  # Encode the message for URL
+    encoded_message = urllib.parse.quote(message)  
 
 
     whatsapp_url = f"https://api.whatsapp.com/send?phone={phone_number}&text={encoded_message}"
