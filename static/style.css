@@ -208,13 +208,13 @@ footer {
 }
 
 .about {
-  padding-top: 180px;
+  padding-top: 150px;
   text-align: center;
-  text-decoration: underline;
+  text-decoration: none;
   margin-bottom: 0px;
   margin-top: 0px;
-  color: rgb(30, 148, 202);
-  font-size: 300px;
+  color:rgb(44, 44, 78);
+  font-size: 150px;
 }
 
 .abt {
@@ -223,4 +223,21 @@ footer {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   text-align: center;
   color: rgb(184, 138, 22);
+}
+.glasscont{
+  
+  margin-top: 50px;
+  margin-bottom: auto;
+  background-color: rgba(225, 225, 225, 0.5);
+  backdrop-filter: blur(2px);
+  border:2px solid rgb(187, 182, 182);
+  border-radius: 40px;
+  text-align: center;
+  height: 400px;
+  width:750px;
+}
+.glassparent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
