@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, redirect, session
-import urllib.parse
 
 app = Flask(__name__)
 app.secret_key = 'aish'
@@ -76,13 +75,10 @@ def book_now():
 
         message = f"Hello! I'm {usr_data['firstname']} {usr_data['lastname']} I would like to book the {court_name} for the {time_slot} slot. Can you confirm the availability and price?"
 
-        encoded_message = urllib.parse.quote(message)
-
-        whatsapp_url = f"https://api.whatsapp.com/send?phone={phone_number}&text={encoded_message}"
+        whatsapp_url = f"https://api.whatsapp.com/send?phone={phone_number}&text={message}"
 
         return redirect(whatsapp_url)
     else:
         return redirect('/login')
-
 if __name__ == '__main__':
     app.run(debug=True)
