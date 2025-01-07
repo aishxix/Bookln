@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+    
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+          <h1>Bookln</h1>
+          <ul class="header-content">
+            <li>
+              <a href="{{url_for('index')}}"><span>Home</span></a>
+            </li>
+            <li>
+              <a href="{{url_for('indoor')}}"><span>Indoor Courts</span></a>
+            </li>
+            <li>
+              <a href="{{url_for('login')}}"><span>Login</span></a>
+            </li>
+            <li>
+              <a href="{{url_for('signup')}}"><span>Signup</span></a>
+            </li>
+            <li>
+              <a href="{{url_for('about')}}"><span>About us</span></a>
+            </li>
+            <li>
+              <a href="{{url_for('contact')}}"><span>Contact us</span></a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="main">
+    <div>
+        <h1 class="S-head">Sign Up</h1>
+    </div>
+        <div class="name">
+            <section class="section2">
+            <input type="text" class="names" placeholder="Firstname" autocomplete="off" required >
+            <input type="text" class="names" placeholder="Lastname" autocomplete="off" required >
+            </section>
+        </div>
+        <div class="id">
+            <input type="text" class="names" placeholder="username" autocomplete="off" required >
+        </div>      
+        <div class="input-box">
+            <input type="text" class="input-field" placeholder="email" autocomplete="off" required >
+        </div>
+        <div class="input-box">
+            <input type="password" class="input-field" placeholder="password" autocomplete="off" required >
+        </div>
+        <div class="forgot">
+            <section>
+                <input type="checkbox" 
+                id="check">
+                <label for="check">Remember me</label> 
+            </section>
+            <!-- <section class="section1">
+                <a href="{{url_for('indoor')}}">Forgot password</a>
+            </section> -->
+        </div>
+        <div class="input-submit">
+            <button class="sign-up-btn"><a href="#">Sign Up</a></button>
+        </div>
+    </div>
+</body>
+</html>
