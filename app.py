@@ -1,11 +1,10 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, session
 import urllib.parse
 
 app = Flask(__name__)
-app.secret_key = 'aish'  
+app.secret_key = 'aish'
 
-
-usr_data = {'username': "", 'email': "", 'pass': "" , 'firstname': "" , "lastname" : ""}
+usr_data = {'username': "", 'email': "", 'pass': "", 'firstname': "", "lastname": ""}
 
 @app.route('/')
 def index():
@@ -13,41 +12,45 @@ def index():
 
 @app.route('/indoor')
 def indoor():
-    return render_template('indoor.html')
+    if 'username' in session:
+        return render_template('indoor.html')
+    else:
+        return redirect('/login')
 
 @app.route('/login', methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-
         username = request.form.get('username')
         password = request.form.get('password')
-        
         if username == usr_data['username'] and password == usr_data['pass']:
-            return redirect('/indoor')  
+            session['username'] = username
+            return redirect('/indoor')
         else:
-            return "Invalid username or password", 401  
+            return "Invalid username or password", 401
     else:
         return render_template('login.html')
+
+@app.route('/logout')
+def logout():
+    session.pop('username', None)
+    return redirect('/login')
 
 @app.route('/signup', methods=["GET", "POST"])
 def signup():
     if request.method == "POST":
-
-        global first_name   
-        global last_name 
+        global first_name
+        global last_name
         global usr_data
         first_name = request.form.get('firstname')
         last_name = request.form.get('lastname')
         username = request.form.get('username')
         password = request.form.get('password')
         email = request.form.get('email')
-        
-
         usr_data['username'] = username
         usr_data['email'] = email
         usr_data['pass'] = password
         usr_data['firstname'] = first_name
-        usr_data['lastname'] = last_name 
+        usr_data['lastname'] = last_name
         return redirect('/login')
     else:
         return render_template('signup.html', firstname="", lastname="", username="", email="", password="")
@@ -62,19 +65,24 @@ def contact():
 
 @app.route('/book', methods=['GET'])
 def book_now():
-    court_name = request.args.get('court')
-    time_slot = request.args.get('time')
-    phone_number = request.args.get('number')
-    
-    if not court_name or not time_slot or not phone_number:
-        return "Missing required parameters.", 400
-    
-    message = f"Hello! I'm {first_name} {last_name} I would like to book the {court_name} for the {time_slot} slot. Can you confirm the availability and price?"
+    if 'username' in session:
 
-    encoded_message = urllib.parse.quote(message)
+        court_name = request.args.get('court')
+        time_slot = request.args.get('time')
+        phone_number = request.args.get('number')
 
-    whatsapp_url = f"https://api.whatsapp.com/send?phone={phone_number}&text={encoded_message}"
-    return redirect(whatsapp_url)
+        if not court_name or not time_slot or not phone_number:
+            return "Missing required parameters.", 400
+
+        message = f"Hello! I'm {usr_data['firstname']} {usr_data['lastname']} I would like to book the {court_name} for the {time_slot} slot. Can you confirm the availability and price?"
+
+        encoded_message = urllib.parse.quote(message)
+
+        whatsapp_url = f"https://api.whatsapp.com/send?phone={phone_number}&text={encoded_message}"
+
+        return redirect(whatsapp_url)
+    else:
+        return redirect('/login')
 
 if __name__ == '__main__':
     app.run(debug=True)
