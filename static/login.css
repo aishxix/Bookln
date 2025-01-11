@@ -156,11 +156,3 @@ color: rgb(208, 93, 11);
 font-weight: initial;
 
 }
-@media screen and (max-width:600px) {
-  h1 {
-      font-size: 26px;
-      line-height: 50px;
-  }
-
-  
-  }
