@@ -233,7 +233,7 @@ footer {
   margin-top: 50px;
   margin-bottom: auto;
   background-color: rgba(225, 225, 225, 0.5);
-  backdrop-filter: blur(3px);
+ 
   border:1px solid rgb(187, 182, 182);
   border-radius: 40px;
   text-align: center;
@@ -263,7 +263,6 @@ footer {
   position:relative;
   background-color:rgba(225, 225, 225, 0.5); 
   border: 1px solid rgb(170, 164, 164);
-  backdrop-filter: blur(3px);
   border-radius: 30px;
   height: 350px;
   width: 360px;
