@@ -268,6 +268,15 @@ footer {
   width: 360px;
   
 } 
+.abt-p{
+  color: black; 
+  font-size:23px; 
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+  padding-top: 70px;
+}
+.cont-head{
+  margin: 5px ;
+}
 .heading{
   text-align: center;
   font-size: 45px;
