@@ -44,7 +44,7 @@ a {
 }
 
 .navbar {
-  background-color: #222;
+  background-image: -webkit-linear-gradient(transparent);
   display: flex;
   justify-content: space-between;
   padding: 15px 20px;

@@ -50,6 +50,7 @@ def signup():
         usr_data['pass'] = password
         usr_data['firstname'] = first_name
         usr_data['lastname'] = last_name
+        print(usr_data)
         return redirect('/login')
     else:
         return render_template('signup.html', firstname="", lastname="", username="", email="", password="")

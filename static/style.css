@@ -43,10 +43,12 @@ h1 {
 }
 
 .navbar {
-  background-color: #222;
+  
   display: flex;
   justify-content: space-between;
-  padding: 15px 20px;
+  padding: 15px 20px; 
+  background-image: -webkit-linear-gradient(transparent);
+
 }
 
 .header-content {
@@ -202,7 +204,9 @@ footer {
 }
 
 .about-pic {
-  background-image: url("./backgrnd.jpeg");
+  background: #003973;
+  background: -webkit-linear-gradient(to top, #e5e5be, #003973);
+  background: linear-gradient(to top, #e5e5be, #003973);
   background-size: cover;
   padding-bottom: 200px;
 }
