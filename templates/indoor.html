@@ -1,1291 +1,1048 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Indoor Grounds</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{url_for('static' , filename = 'style.css')}}" />
-  </head>
-  <body>
-    <section class="indoor-bg">
-      <div class="wrapper">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container-fluid">
-                <a class="nav-a navbar-brand" href="#">Bookln</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                      <li>
-                        <a class="nav-link" href="{{url_for('index')}}"><span>Home</span></a>
-                      </li>
-                        
-                      <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="{{url_for('about')}}"><span>About Us</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{url_for('indoor')}}"><span>Indoor Courts</span></a>
-                        </li>
-                        <li>
-                          <a class="nav-link" href="{{url_for('login')}}"><span>Login</span></a>
-                        </li>
-                        <li>
-                          <a  class="nav-link"  href="{{url_for('signup')}}"><span>Signup</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{url_for('contact')}}"><span>Contact Us</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    
-    <div class="card" data-court="LEGENDS ARENA">
-      <img
-        src="{{ url_for('static', filename='LEGENDSARENA.avif') }}"
-        class="card-img-top"
-        alt="LEGENDS ARENA"
-      />
-      <div class="card-body">
-        <h5 class="card-title">LEGENDS ARENA</h5>
-        <p class="card-text">
-          One of the best court in Karachi<br />
-          Futsal,Football,Tenis,Badminton and Cricket
-        </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Indoor Grounds</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="LEGENDS ARENA" />
-          <input type="hidden" name="number" value="923001127362" />
-          <label for="time-select-hasan">Select Time:</label>
-          <select id="time-select-hasan" name="time" class="form-select">
-            <option value="12:00 AM to 11:30 PM ">
-              12:00 AM to 11:30 PM (any 1/2 hour)
-            </option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{url_for('static' , filename = 'style.css')}}" />
+</head>
+
+<body>
+  <section class="indoor-bg">
+    <div class="wrapper">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="nav-a navbar-brand" href="#">Bookln</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li>
+                <a class="nav-link" href="{{url_for('index')}}"><span>Home</span></a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="{{url_for('about')}}"><span>About Us</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('indoor')}}"><span>Indoor Courts</span></a>
+              </li>
+              <li>
+                <a class="nav-link" href="{{url_for('login')}}"><span>Login</span></a>
+              </li>
+              <li>
+                <a class="nav-link" href="{{url_for('signup')}}"><span>Signup</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('contact')}}"><span>Contact Us</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="card" data-court="LEGENDS ARENA">
+        <img src="{{ url_for('static', filename='LEGENDSARENA.avif') }}" class="card-img-top" alt="LEGENDS ARENA" />
+        <div class="card-body">
+          <h5 class="card-title">LEGENDS ARENA</h5>
+          <p class="card-text">
+            One of the best court in Karachi<br />
+            Futsal,Football,Tenis,Badminton and Cricket
+          </p>
+
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="LEGENDS ARENA" />
+            <input type="hidden" name="number" value="923001127362" />
+            <label for="date-select">Select Date:</label>
+            <input type="date" id="date-select" name="date" class="form-control" required>
+            <label for="time-select-hasan">Select Time:</label>
+            <select id="time-select-hasan" name="time" class="form-select">
+              <option value="12:00 AM to 11:30 PM ">
+                12:00 AM to 11:30 PM
+              </option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card" data-court="Power Hitters">
-      <img
-        src="{{ url_for('static', filename='PowerHitters.jpg') }}"
-        class="card-img-top"
-        alt="Power Hitters"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Power Hitters</h5>
-        <p class="card-text">
-          Power Hitters Indoor Cricket Arena with 4 Astro Turf Courts
-        </p>
+      <div class="card" data-court="Power Hitters">
+        <img src="{{ url_for('static', filename='PowerHitters.jpg') }}" class="card-img-top" alt="Power Hitters" />
+        <div class="card-body">
+          <h5 class="card-title">Power Hitters</h5>
+          <p class="card-text">
+            Power Hitters Indoor Cricket Arena with 4 Astro Turf Courts
+          </p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Power Hitters" />
-          <input type="hidden" name="number" value="923333164366" />
-          <label for="time-select-raheem">Select Time:</label>
-          <select id="time-select-raheem" name="time" class="form-select">
-            <option value="7:00 AM to 5:00 PM (Monday to Tursday)">
-              7:00 AM to 5:00 PM (Monday to Tursday)
-            </option>
-            <option value="5:00 PM to 12:00 AM (Friday to Sunday)">
-              5:00 PM to 12:00 AM (Friday to Sunday)
-            </option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Power Hitters" />
+            <input type="hidden" name="number" value="923333164366" />
+            <label for="time-select-raheem">Select Time:</label>
+            <select id="time-select-raheem" name="time" class="form-select">
+              <option value="7:00 AM to 5:00 PM (Monday to Tursday)">
+                7:00 AM to 5:00 PM (Monday to Tursday)
+              </option>
+              <option value="5:00 PM to 12:00 AM (Friday to Sunday)">
+                5:00 PM to 12:00 AM (Friday to Sunday)
+              </option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card" data-court=" Groove Arena">
-      <img
-        src="{{ url_for('static', filename='Groove.PNG') }}"
-        class="card-img-top"
-        alt="Groove Court"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Groove Arena</h5>
-        <p class="card-text">
-          One of the most purposely built futsalcourts with all facilities
-        </p>
+      <div class="card" data-court=" Groove Arena">
+        <img src="{{ url_for('static', filename='Groove.PNG') }}" class="card-img-top" alt="Groove Court" />
+        <div class="card-body">
+          <h5 class="card-title">Groove Arena</h5>
+          <p class="card-text">
+            One of the most purposely built futsalcourts with all facilities
+          </p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Groove Arena" />
-          <input type="hidden" name="number" value="923153423429" />
-          <label for="time-select-raheem">Select Time:</label>
-          <select id="time-select-raheem" name="time" class="form-select">
-            <option value="7:00 AM to 8:00 PM">7:00 AM to 8:00 AM</option>
-            <option value="8:00 AM to 9:00 PM">8:00 AM to 9:00 AM</option>
-            <option value="9:00 AM to 10:00 PM">9:00 AM to 10:00 AM</option>
-            <option value="10:00 AM to 11:00 PM">10:00 AM to 11:00 AM</option>
-            <option value="11:00 AM to 12:00 PM">11:00 AM to 12:00 PM</option>
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Groove Arena" />
+            <input type="hidden" name="number" value="923153423429" />
+            <label for="time-select-raheem">Select Time:</label>
+            <select id="time-select-raheem" name="time" class="form-select">
+              <option value="7:00 AM to 8:00 PM">7:00 AM to 8:00 AM</option>
+              <option value="8:00 AM to 9:00 PM">8:00 AM to 9:00 AM</option>
+              <option value="9:00 AM to 10:00 PM">9:00 AM to 10:00 AM</option>
+              <option value="10:00 AM to 11:00 PM">10:00 AM to 11:00 AM</option>
+              <option value="11:00 AM to 12:00 PM">11:00 AM to 12:00 PM</option>
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card"  data-court=" Fireball sports Arena">
-      <img
-        src="{{ url_for('static', filename='FIREBALL.jpg') }}"
-        class="card-img-top"
-        alt="Fireball Arena"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Fireball Arena</h5>
-        <p class="card-text">5v5 and also 11v11</p>
+      <div class="card" data-court=" Fireball sports Arena">
+        <img src="{{ url_for('static', filename='FIREBALL.jpg') }}" class="card-img-top" alt="Fireball Arena" />
+        <div class="card-body">
+          <h5 class="card-title">Fireball Arena</h5>
+          <p class="card-text">5v5 and also 11v11</p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Fireball Arena" />
-          <input type="hidden" name="number" value="923073833225" />
-          <label for="time-select-raheem">Select Time:</label>
-          <select id="time-select-raheem" name="time" class="form-select">
-            <option value="7:00 AM to 5:00 PM">
-              7:00 AM to 5:00 PM (any hour)
-            </option>
-            <option value="7:00 PM to 1:00 AM">
-              7:00 PM to 1:00 AM (any hour)
-            </option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Fireball Arena" />
+            <input type="hidden" name="number" value="923073833225" />
+            <label for="time-select-raheem">Select Time:</label>
+            <select id="time-select-raheem" name="time" class="form-select">
+              <option value="7:00 AM to 5:00 PM">
+                7:00 AM to 5:00 PM (any hour)
+              </option>
+              <option value="7:00 PM to 1:00 AM">
+                7:00 PM to 1:00 AM (any hour)
+              </option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card"  data-court="Champions Pavilion HPGS">
-      <img
-        src="{{ url_for('static', filename='HPGS.jpg') }}"
-        class="card-img-top"
-        alt="Champions Pavilion HPGS"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Champions Pavilion HPGS</h5>
-        <p class="card-text">
-          Immaculately maintained pitches for the perfect game and comfortable
-          grounds designed with players in mind
-        </p>
+      <div class="card" data-court="Champions Pavilion HPGS">
+        <img src="{{ url_for('static', filename='HPGS.jpg') }}" class="card-img-top" alt="Champions Pavilion HPGS" />
+        <div class="card-body">
+          <h5 class="card-title">Champions Pavilion HPGS</h5>
+          <p class="card-text">
+            Immaculately maintained pitches for the perfect game and comfortable
+            grounds designed with players in mind
+          </p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Champions Pavilion HPGS" />
-          <input type="hidden" name="number" value="923090214747" />
-          <label for="time-select-raheem">Select Time:</label>
-          <select id="time-select-raheem" name="time" class="form-select">
-            <option value="7:00 PM to 1:00 AM">
-              7:00 AM to 1:00 AM (always open)
-            </option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Champions Pavilion HPGS" />
+            <input type="hidden" name="number" value="923090214747" />
+            <label for="time-select-raheem">Select Time:</label>
+            <select id="time-select-raheem" name="time" class="form-select">
+              <option value="7:00 PM to 1:00 AM">
+                7:00 AM to 1:00 AM
+              </option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card"  data-court="Powerplay">
-      <img
-        src="{{ url_for('static', filename='Powerplay.jpg') }}"
-        class="card-img-top"
-        alt="Power play"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Powerplay</h5>
-        <p class="card-text">
-          home ground for Cricket, Futsal, Badminton, and Throwball. An artistic
-          sports arena.
-        </p>
+      <div class="card" data-court="Powerplay">
+        <img src="{{ url_for('static', filename='Powerplay.jpg') }}" class="card-img-top" alt="Power play" />
+        <div class="card-body">
+          <h5 class="card-title">Powerplay</h5>
+          <p class="card-text">
+            home ground for Cricket, Futsal, Badminton, and Throwball. An artistic
+            sports arena.
+          </p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Powerplay" />
-          <input type="hidden" name="number" value="923193497605" />
-          <label for="time-select-raheem">Select Time:</label>
-          <select id="time-select-raheem" name="time" class="form-select">
-            <option value="7:00 AM to 1:00 AM">
-              7:00 AM to 1:00 AM (always open)
-            </option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Powerplay" />
+            <input type="hidden" name="number" value="923193497605" />
+            <label for="time-select-raheem">Select Time:</label>
+            <select id="time-select-raheem" name="time" class="form-select">
+              <option value="7:00 AM to 1:00 AM">
+                7:00 AM to 1:00 AM
+              </option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card"  data-court="The Legacy Court">
-      <img
-        src="{{ url_for('static', filename='The Legacy Court.jpg') }}"
-        class="card-img-top"
-        alt="The Legacy Court"
-      />
-      <div class="card-body">
-        <h5 class="card-title">The Legacy Court</h5>
-        <p class="card-text">
-          Multi Sports Arena in Gulshan & Scheme 33 Karachi We are open 24/7 M A
-          D E T O D E L I V E R
-        </p>
+      <div class="card" data-court="The Legacy Court">
+        <img src="{{ url_for('static', filename='The Legacy Court.jpg') }}" class="card-img-top"
+          alt="The Legacy Court" />
+        <div class="card-body">
+          <h5 class="card-title">The Legacy Court</h5>
+          <p class="card-text">
+            Multi Sports Arena in Gulshan & Scheme 33 Karachi.
+          </p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="The Legacy Court" />
-          <input type="hidden" name="number" value="92312 6628197" />
-          <label for="time-select-raheem">Select Time:</label>
-          <select id="time-select-raheem" name="time" class="form-select">
-            <option value="7:00 AM to 7:00 AM">7:00 AM(always open)</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="The Legacy Court" />
+            <input type="hidden" name="number" value="92312 6628197" />
+            <label for="time-select-raheem">Select Time:</label>
+            <select id="time-select-raheem" name="time" class="form-select">
+              <option value="7:00 AM to 7:00 AM">7:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card"  data-court=" Thesportsclub22">
-      <img
-        src="{{ url_for('static', filename='Thesportsclub.jpg') }}"
-        class="card-img-top"
-        alt="Thesportsclub22"
-      />
-      <div class="card-body">
-        <h5 class="card-title">The Sports Club</h5>
-        <p class="card-text">
-          The Sports Club is a state of art facility for Sports Lover.
-        </p>
+      <div class="card" data-court=" Thesportsclub22">
+        <img src="{{ url_for('static', filename='Thesportsclub.jpg') }}" class="card-img-top" alt="Thesportsclub22" />
+        <div class="card-body">
+          <h5 class="card-title">The Sports Club</h5>
+          <p class="card-text">
+            The Sports Club is a state of art facility for Sports Lover.
+          </p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Thesportsclub22" />
-          <input type="hidden" name="number" value="923167090600" />
-          <label for="time-select-raheem">Select Time:</label>
-          <select id="time-select-raheem" name="time" class="form-select">
-            <option value="7:00 AM to 5:00 PM">7:00 AM to 5:00 PM</option>
-            <option value="5:00 PM to 12:00 AM">5:00 PM to 12:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Thesportsclub22" />
+            <input type="hidden" name="number" value="923167090600" />
+            <label for="time-select-raheem">Select Time:</label>
+            <select id="time-select-raheem" name="time" class="form-select">
+              <option value="7:00 AM to 5:00 PM">7:00 AM to 5:00 PM</option>
+              <option value="5:00 PM to 12:00 AM">5:00 PM to 12:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card"  data-court=" Elite Indoor">
-      <img
-        src="{{ url_for('static', filename='EliteIndoor.jpg') }}"
-        class="card-img-top"
-        alt="Elite Indoor"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Elite Indoor</h5>
-        <p class="card-text">
-          the Land of Indoor Cricket where you can showcase your batting talent.
-        </p>
+      <div class="card" data-court=" Elite Indoor">
+        <img src="{{ url_for('static', filename='EliteIndoor.jpg') }}" class="card-img-top" alt="Elite Indoor" />
+        <div class="card-body">
+          <h5 class="card-title">Elite Indoor</h5>
+          <p class="card-text">
+            the Land of Indoor Cricket where you can showcase your batting talent.
+          </p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Elite Indoor" />
-          <input type="hidden" name="number" value="92335 2361184" />
-          <label for="time-select-raheem">Select Time:</label>
-          <select id="time-select-raheem" name="time" class="form-select">
-            <option value="Monday 1:00 PM - 11:00 PM">
-              Monday 1:00 PM - 11:00 PM
-            </option>
-            <option value="Tuesday 1:00 PM - 11:00 PM">
-              Tuesday 1:00 PM - 11:00 PM
-            </option>
-            <option value="Wednesday 1:00 PM - 11:00 PM">
-              Wednesday 1:00 PM - 11:00 PM
-            </option>
-            <option value="Thusday 1:00 PM - 11:00 PM">
-              Thusday 1:00 PM - 11:00 PM
-            </option>
-            <option value="Friday 1:00 PM - 11:00 PM">
-              Friday 1:00 PM - 11:00 PM
-            </option>
-            <option value="Saturday 8:00 AM - 11:00 PM">
-              Satday 8:00 AM - 11:00 PM
-            </option>
-            <option value="Sunday 8:00 AM - 11:00 PM">
-              Sunday 8:00 AM - 11:00 PM
-            </option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Elite Indoor" />
+            <input type="hidden" name="number" value="92335 2361184" />
+            <label for="time-select-raheem">Select Time:</label>
+            <select id="time-select-raheem" name="time" class="form-select">
+              <option value="Monday 1:00 PM - 11:00 PM">
+                Monday 1:00 PM - 11:00 PM
+              </option>
+              <option value="Tuesday 1:00 PM - 11:00 PM">
+                Tuesday 1:00 PM - 11:00 PM
+              </option>
+              <option value="Wednesday 1:00 PM - 11:00 PM">
+                Wednesday 1:00 PM - 11:00 PM
+              </option>
+              <option value="Thusday 1:00 PM - 11:00 PM">
+                Thusday 1:00 PM - 11:00 PM
+              </option>
+              <option value="Friday 1:00 PM - 11:00 PM">
+                Friday 1:00 PM - 11:00 PM
+              </option>
+              <option value="Saturday 8:00 AM - 11:00 PM">
+                Satday 8:00 AM - 11:00 PM
+              </option>
+              <option value="Sunday 8:00 AM - 11:00 PM">
+                Sunday 8:00 AM - 11:00 PM
+              </option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card"  data-court="Futflick">
-      <img
-        src="{{ url_for('static', filename='FUTFLIX.PNG') }}"
-        class="card-img-top"
-        alt="Futflick"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Futflick</h5>
-        <p class="card-text">
-          Fitness, Fun, Fellowship. including table tenis,throwball,cricket and
-          futsal
-        </p>
+      <div class="card" data-court="Futflick">
+        <img src="{{ url_for('static', filename='FUTFLIX.PNG') }}" class="card-img-top" alt="Futflick" />
+        <div class="card-body">
+          <h5 class="card-title">Futflick</h5>
+          <p class="card-text">
+            Fitness, Fun, Fellowship. including table tenis,throwball,cricket and
+            futsal
+          </p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Futflick" />
-          <input type="hidden" name="number" value="923003928092" />
-          <label for="time-select-raheem">Select Time:</label>
-          <select id="time-select-raheem" name="time" class="form-select">
-            <option value="Monday  7AM – 1AM">Monday 7AM – 1AM</option>
-            <option value="Tuesday  7AM – 1AM">Tuesday 7AM – 1AM</option>
-            <option value="Wednesday  7AM – 1AM">Wednesday 7AM – 1AM</option>
-            <option value="Thusday 7AM – 1AM">Thusday 7AM – 1AM</option>
-            <option value="Friday 7AM – 2AM">Friday 7AM – 2AM</option>
-            <option value="Saturday 7AM – 4AM">Satday 7AM – 4AM</option>
-            <option value="Sunday 7AM –11:30PM ">Sunday 7AM –11:30PM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Futflick" />
+            <input type="hidden" name="number" value="923003928092" />
+            <label for="time-select-raheem">Select Time:</label>
+            <select id="time-select-raheem" name="time" class="form-select">
+              <option value="Monday  7AM – 1AM">Monday 7AM – 1AM</option>
+              <option value="Tuesday  7AM – 1AM">Tuesday 7AM – 1AM</option>
+              <option value="Wednesday  7AM – 1AM">Wednesday 7AM – 1AM</option>
+              <option value="Thusday 7AM – 1AM">Thusday 7AM – 1AM</option>
+              <option value="Friday 7AM – 2AM">Friday 7AM – 2AM</option>
+              <option value="Saturday 7AM – 4AM">Satday 7AM – 4AM</option>
+              <option value="Sunday 7AM –11:30PM ">Sunday 7AM –11:30PM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card"  data-court="Extenders Arena">
-      <img
-        src="{{ url_for('static', filename='ExtendersArena.jpg') }}"
-        class="card-img-top"
-        alt="Extenders Arena"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Extenders Arena</h5>
-        <p class="card-text">Passionate about promoting indoor sports</p>
+      <div class="card" data-court="Extenders Arena">
+        <img src="{{ url_for('static', filename='ExtendersArena.jpg') }}" class="card-img-top" alt="Extenders Arena" />
+        <div class="card-body">
+          <h5 class="card-title">Extenders Arena</h5>
+          <p class="card-text">Passionate about promoting indoor sports</p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Extenders Arena" />
-          <input type="hidden" name="number" value="923182294182" />
-          <label for="time-select-raheem">Select Time:</label>
-          <select id="time-select-raheem" name="time" class="form-select">
-            <option value="day:            time:         ">
-              Monday - Sunday(24 hours)
-            </option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Extenders Arena" />
+            <input type="hidden" name="number" value="923182294182" />
+            <label for="time-select-raheem">Select Time:</label>
+            <select id="time-select-raheem" name="time" class="form-select">
+              <option value="Monday 1:00 PM - 11:00 PM">
+                Monday 1:00 PM - 11:00 PM
+              </option>
+              <option value="Tuesday 1:00 PM - 11:00 PM">
+                Tuesday 1:00 PM - 11:00 PM
+              </option>
+              <option value="Wednesday 1:00 PM - 11:00 PM">
+                Wednesday 1:00 PM - 11:00 PM
+              </option>
+              <option value="Thusday 1:00 PM - 11:00 PM">
+                Thusday 1:00 PM - 11:00 PM
+              </option>
+              <option value="Friday 1:00 PM - 11:00 PM">
+                Friday 1:00 PM - 11:00 PM
+              </option>
+              <option value="Saturday 8:00 AM - 11:00 PM">
+                Satday 8:00 AM - 11:00 PM
+              </option>
+              <option value="Sunday 8:00 AM - 11:00 PM">
+                Sunday 8:00 AM - 11:00 PM
+              </option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card"  data-court=" Flex ">
-      <img
-        src="{{ url_for('static', filename='Flex.jpg') }}"
-        class="card-img-top"
-        alt="Flex "
-      />
-      <div class="card-body">
-        <h5 class="card-title">Flex</h5>
-        <p class="card-text">Multi-purpose sports facility in Karachi</p>
+      <div class="card" data-court=" Flex ">
+        <img src="{{ url_for('static', filename='Flex.jpg') }}" class="card-img-top" alt="Flex " />
+        <div class="card-body">
+          <h5 class="card-title">Flex</h5>
+          <p class="card-text">Multi-purpose sports facility in Karachi</p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Flex" />
-          <input type="hidden" name="number" value="923241027055" />
-          <label for="time-select-raheem">Select Time:</label>
-          <select id="time-select-raheem" name="time" class="form-select">
-            <option value="Monday ">Monday 4:00 PM - 9:00 PM</option>
-            <option value="Tuesday ">Tuesday 4:30 PM - 9:00 PM</option>
-            <option value="Wednesday ">Wednesday 4:30 PM - 9:00 PM</option>
-            <option value="Thusday ">Thusday 4:30 PM - 9:00 PM</option>
-            <option value="Friday">Friday 4:30 PM - 9:30 PM</option>
-            <option value="Saturday ">Satday 4:30 PM - 9:30 PM</option>
-            <option value="Sunday ">Sunday 4:30 PM - 9:30 PM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Flex" />
+            <input type="hidden" name="number" value="923241027055" />
+            <label for="time-select-raheem">Select Time:</label>
+            <select id="time-select-raheem" name="time" class="form-select">
+              <option value="Monday ">Monday 4:00 PM - 9:00 PM</option>
+              <option value="Tuesday ">Tuesday 4:30 PM - 9:00 PM</option>
+              <option value="Wednesday ">Wednesday 4:30 PM - 9:00 PM</option>
+              <option value="Thusday ">Thusday 4:30 PM - 9:00 PM</option>
+              <option value="Friday">Friday 4:30 PM - 9:30 PM</option>
+              <option value="Saturday ">Satday 4:30 PM - 9:30 PM</option>
+              <option value="Sunday ">Sunday 4:30 PM - 9:30 PM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card" data-court=" Aranzee Arena">
-      <img
-        src="{{ url_for('static', filename='AranzeeArena.jpg') }}"
-        class="card-img-top"
-        alt="Aranzee Arena"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Aranzee Arena</h5>
-        <p class="card-text">
-          One of the most purposely built futsalcourts with all facilities
-        </p>
+      <div class="card" data-court=" Aranzee Arena">
+        <img src="{{ url_for('static', filename='AranzeeArena.jpg') }}" class="card-img-top" alt="Aranzee Arena" />
+        <div class="card-body">
+          <h5 class="card-title">Aranzee Arena</h5>
+          <p class="card-text">
+            One of the most purposely built futsalcourts with all facilities
+          </p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Aranzee Arena" />
-          <input type="hidden" name="number" value="923332226424" />
-          <label for="time-select-raheem">Select Time:</label>
-          <select id="time-select-raheem" name="time" class="form-select">
-            <option value="2:00 PM to 11:00 PM">2:00 PM to 11:00 PM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Aranzee Arena" />
+            <input type="hidden" name="number" value="923332226424" />
+            <label for="time-select-raheem">Select Time:</label>
+            <select id="time-select-raheem" name="time" class="form-select">
+              <option value="2:00 PM to 11:00 PM">2:00 PM to 11:00 PM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card"  data-court=" Emaar Futsal ">
-      <img
-        src="{{ url_for('static', filename='KUEmaar.jpg') }}"
-        class="card-img-top"
-        alt=" Emaar Futsal "
-      />
-      <div class="card-body">
-        <h5 class="card-title">Emaar Futsal</h5>
-        <p class="card-text">
-          beside the sea shore a with best staff challenge your friends to a
-          friendly match!!.
-        </p>
+      <div class="card" data-court=" Emaar Futsal ">
+        <img src="{{ url_for('static', filename='KUEmaar.jpg') }}" class="card-img-top" alt=" Emaar Futsal " />
+        <div class="card-body">
+          <h5 class="card-title">Emaar Futsal</h5>
+          <p class="card-text">
+            beside the sea shore a with best staff challenge your friends to a
+            friendly match!!.
+          </p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Emaar Futsal" />
-          <input type="hidden" name="number" value="923026792222." />
-          <label for="time-select-raheem">Select Time:</label>
-          <select id="time-select-raheem" name="time" class="form-select">
-            <option value="Monday ,Time:        ">Monday 6 pm–12 am</option>
-            <option value="Tuesday,Time:         ">Tuesday 6 pm–12 am</option>
-            <option value="Wednesday,Time:         ">
-              Wednesday 6 pm–12 am
-            </option>
-            <option value="Thursday ,Time:        ">Thursday 6 pm–12 am</option>
-            <option value="Friday,Time:        ">Friday 6 pm–12 am</option>
-            <option value="Saturday ,Time:        ">
-              Saturday 12 pm–12 am
-            </option>
-            <option value="Sunday ,Time:         ">Sunday 12 pm–12 am</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Emaar Futsal" />
+            <input type="hidden" name="number" value="923026792222." />
+            <label for="time-select-raheem">Select Time:</label>
+            <select id="time-select-raheem" name="time" class="form-select">
+              <option value="Monday ,Time:        ">Monday 6 pm–12 am</option>
+              <option value="Tuesday,Time:         ">Tuesday 6 pm–12 am</option>
+              <option value="Wednesday,Time:         ">
+                Wednesday 6 pm–12 am
+              </option>
+              <option value="Thursday ,Time:        ">Thursday 6 pm–12 am</option>
+              <option value="Friday,Time:        ">Friday 6 pm–12 am</option>
+              <option value="Saturday ,Time:        ">
+                Saturday 12 pm–12 am
+              </option>
+              <option value="Sunday ,Time:         ">Sunday 12 pm–12 am</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card" data-court=" Sportswing">
-      <img
-        src="{{ url_for('static', filename='sportswin.jpg') }}"
-        class="card-img-top"
-        alt="Sportswing"
-      />
-      <div class="card-body">
-        <h5 class="card-title">SportSwing</h5>
-        <p class="card-text">.....Multi Sporting Venue......</p>
+      <div class="card" data-court=" Sportswing">
+        <img src="{{ url_for('static', filename='sportswin.jpg') }}" class="card-img-top" alt="Sportswing" />
+        <div class="card-body">
+          <h5 class="card-title">SportSwing</h5>
+          <p class="card-text">.....Multi Sporting Venue......</p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Sportwing" />
-          <input type="hidden" name="number" value="923241541163" />
-          <label for="time-select-raheem">Select Time:</label>
-          <select id="time-select-raheem" name="time" class="form-select">
-            <option value="Monday ,Time:        ">Monday, 4 pm–1 am</option>
-            <option value="Tuesday,Time:         ">Tuesday, 4 pm–1 am</option>
-            <option value="Wednesday,Time:         ">
-              Wednesday, 4 pm–12 am
-            </option>
-            <option value="Thursday ,Time:        ">
-              Thursday, 12 am–1 pm and 4 pm–1 am
-            </option>
-            <option value="Friday,Time:        ">Friday, 4 am–1 pm</option>
-            <option value="Saturday ,Time:        ">Saturday, 1 pm–1 am</option>
-            <option value="Sunday ,Time:         ">Sunday, 1 pm–1 am</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Sportwing" />
+            <input type="hidden" name="number" value="923241541163" />
+            <label for="time-select-raheem">Select Time:</label>
+            <select id="time-select-raheem" name="time" class="form-select">
+              <option value="Monday ,Time:        ">Monday, 4 pm–1 am</option>
+              <option value="Tuesday,Time:         ">Tuesday, 4 pm–1 am</option>
+              <option value="Wednesday,Time:         ">
+                Wednesday, 4 pm–12 am
+              </option>
+              <option value="Thursday ,Time:        ">
+                Thursday, 12 am–1 pm and 4 pm–1 am
+              </option>
+              <option value="Friday,Time:        ">Friday, 4 am–1 pm</option>
+              <option value="Saturday ,Time:        ">Saturday, 1 pm–1 am</option>
+              <option value="Sunday ,Time:         ">Sunday, 1 pm–1 am</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card"  data-court="Sports Spirit ">
-      <img
-        src="{{ url_for('static', filename='sportspirit.jpg') }}"
-        class="card-img-top"
-        alt="Sports Spirit"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Sports Spirit</h5>
-        <p class="card-text">
-          Fuel your competitive spirit at Sports Spirit Futsal and Cricket
-          Field.
-        </p>
+      <div class="card" data-court="Sports Spirit ">
+        <img src="{{ url_for('static', filename='sportspirit.jpg') }}" class="card-img-top" alt="Sports Spirit" />
+        <div class="card-body">
+          <h5 class="card-title">Sports Spirit</h5>
+          <p class="card-text">
+            Fuel your competitive spirit at Sports Spirit Futsal and Cricket
+            Field.
+          </p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Sports Spirit" />
-          <input type="hidden" name="number" value="923238283392" />
-          <label for="time-select-raheem">Select Time:</label>
-          <select id="time-select-raheem" name="time" class="form-select">
-            <option value="day:            time:         ">
-              Monday - Sunday(24 hours)
-            </option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Sports Spirit" />
+            <input type="hidden" name="number" value="923238283392" />
+            <label for="time-select-raheem">Select Time:</label>
+            <select id="time-select-raheem" name="time" class="form-select">
+              <option value="day:            time:         ">
+                Monday - Sunday(24 hours)
+              </option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card" data-court="Freehit">
-      <img
-        src="{{ url_for('static', filename='freehit.jpg') }}"
-        class="card-img-top"
-        alt="Freehit"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Freehit</h5>
-        <p class="card-text">Good court with good grass</p>
+      <div class="card" data-court="Freehit">
+        <img src="{{ url_for('static', filename='freehit.jpg') }}" class="card-img-top" alt="Freehit" />
+        <div class="card-body">
+          <h5 class="card-title">Freehit</h5>
+          <p class="card-text">Good court with good grass</p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Freehit" />
-          <input type="hidden" name="number" value="923182943399" />
-          <label for="time-select-Freehit">Select Time:</label>
-          <select id="time-select-Freehit" name="time" class="form-select">
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Freehit" />
+            <input type="hidden" name="number" value="923182943399" />
+            <label for="time-select-Freehit">Select Time:</label>
+            <select id="time-select-Freehit" name="time" class="form-select">
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card" data-court="The Spot">
-      <img
-        src="{{ url_for('static', filename='spot.jpg') }}"
-        class="card-img-top"
-        alt="The Spot"
-      />
-      <div class="card-body">
-        <h5 class="card-title">The Spot</h5>
-        <p class="card-text">Lush green court, game-ready vibes!</p>
+      <div class="card" data-court="The Spot">
+        <img src="{{ url_for('static', filename='spot.jpg') }}" class="card-img-top" alt="The Spot" />
+        <div class="card-body">
+          <h5 class="card-title">The Spot</h5>
+          <p class="card-text">Lush green court, game-ready vibes!</p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="The Spot" />
-          <input type="hidden" name="number" value="923333095932" />
-          <label for="time-select-The Spot">Select Time:</label>
-          <select id="time-select-The Spot" name="time" class="form-select">
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="The Spot" />
+            <input type="hidden" name="number" value="923333095932" />
+            <label for="time-select-The Spot">Select Time:</label>
+            <select id="time-select-The Spot" name="time" class="form-select">
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card" data-court="Legends Arena">
-      <img
-        src="{{ url_for('static', filename='Legends arena.jpg') }}"
-        class="card-img-top"
-        alt="Legends Arena"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Legends Arena</h5>
-        <p class="card-text">Where the grass meets greatness</p>
+      <div class="card" data-court="Legends Arena">
+        <img src="{{ url_for('static', filename='Legends arena.jpg') }}" class="card-img-top" alt="Legends Arena" />
+        <div class="card-body">
+          <h5 class="card-title">Legends Arena</h5>
+          <p class="card-text">Where the grass meets greatness</p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Legends Arena" />
-          <input type="hidden" name="number" value="923001127362" />
-          <label for="time-select-Legends Arena">Select Time:</label>
-          <select
-            id="time-select-Legends Arena"
-            name="time"
-            class="form-select"
-          >
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Legends Arena" />
+            <input type="hidden" name="number" value="923001127362" />
+            <label for="time-select-Legends Arena">Select Time:</label>
+            <select id="time-select-Legends Arena" name="time" class="form-select">
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div
-      class="card"
-    
-      data-court="Maidan at KMC Sports Complex"
-    >
-      <img
-        src="{{ url_for('static', filename='Maidan_at_kmc.jpg') }}"
-        class="card-img-top"
-        alt="Maidan at KMC Sports Complex"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Maidan at KMC Sports Complex</h5>
-        <p class="card-text">Grass groomed to perfection</p>
+      <div class="card" data-court="Maidan at KMC Sports Complex">
+        <img src="{{ url_for('static', filename='Maidan_at_kmc.jpg') }}" class="card-img-top"
+          alt="Maidan at KMC Sports Complex" />
+        <div class="card-body">
+          <h5 class="card-title">Maidan at KMC Sports Complex</h5>
+          <p class="card-text">Grass groomed to perfection</p>
 
-        <form action="/book" method="get">
-          <input
-            type="hidden"
-            name="court"
-            value="Maidan at KMC Sports Complex"
-          />
-          <input type="hidden" name="number" value="923330624326" />
-          <label for="time-select-Maidan at KMC Sports Complex"
-            >Select Time:</label
-          >
-          <select
-            id="time-select-Maidan at KMC Sports Complex"
-            name="time"
-            class="form-select"
-          >
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Maidan at KMC Sports Complex" />
+            <input type="hidden" name="number" value="923330624326" />
+            <label for="time-select-Maidan at KMC Sports Complex">Select Time:</label>
+            <select id="time-select-Maidan at KMC Sports Complex" name="time" class="form-select">
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card" data-court="Backyard Club">
-      <img
-        src="{{ url_for('static', filename='backyardclub.jpg') }}"
-        class="card-img-top"
-        alt="Backyard Club"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Backyard Club</h5>
-        <p class="card-text">Smooth greens, smooth game</p>
+      <div class="card" data-court="Backyard Club">
+        <img src="{{ url_for('static', filename='backyardclub.jpg') }}" class="card-img-top" alt="Backyard Club" />
+        <div class="card-body">
+          <h5 class="card-title">Backyard Club</h5>
+          <p class="card-text">Smooth greens, smooth game</p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Backyard Club" />
-          <input type="hidden" name="number" value="923196756090" />
-          <label for="time-select-Backyard Club">Select Time:</label>
-          <select
-            id="time-select-Backyard Club"
-            name="time"
-            class="form-select"
-          >
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Backyard Club" />
+            <input type="hidden" name="number" value="923196756090" />
+            <label for="time-select-Backyard Club">Select Time:</label>
+            <select id="time-select-Backyard Club" name="time" class="form-select">
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card" data-court="Power Play">
-      <img
-        src="{{ url_for('static', filename='powerplay.jpg') }}"
-        class="card-img-top"
-        alt="Power Play"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Power Play</h5>
-        <p class="card-text">A court that matches your passion</p>
+      <div class="card" data-court="Power Play">
+        <img src="{{ url_for('static', filename='powerplay.jpg') }}" class="card-img-top" alt="Power Play" />
+        <div class="card-body">
+          <h5 class="card-title">Power Play</h5>
+          <p class="card-text">A court that matches your passion</p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Power Play" />
-          <input type="hidden" name="number" value="923313165589" />
-          <label for="time-select-Power Play">Select Time:</label>
-          <select id="time-select-Power Play" name="time" class="form-select">
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Power Play" />
+            <input type="hidden" name="number" value="923313165589" />
+            <label for="time-select-Power Play">Select Time:</label>
+            <select id="time-select-Power Play" name="time" class="form-select">
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card"  data-court="Flex Pakistan">
-      <img
-        src="{{ url_for('static', filename='flex pakistan.jpg') }}"
-        class="card-img-top"
-        alt="Flex Pakistan"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Flex Pakistan</h5>
-        <p class="card-text">Flawless turf, endless play</p>
+      <div class="card" data-court="Flex Pakistan">
+        <img src="{{ url_for('static', filename='flex pakistan.jpg') }}" class="card-img-top" alt="Flex Pakistan" />
+        <div class="card-body">
+          <h5 class="card-title">Flex Pakistan</h5>
+          <p class="card-text">Flawless turf, endless play</p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Flex Pakistan" />
-          <input type="hidden" name="number" value="923241027055" />
-          <label for="time-select-Flex Pakistan">Select Time:</label>
-          <select
-            id="time-select-Flex Pakistan"
-            name="time"
-            class="form-select"
-          >
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Flex Pakistan" />
+            <input type="hidden" name="number" value="923241027055" />
+            <label for="time-select-Flex Pakistan">Select Time:</label>
+            <select id="time-select-Flex Pakistan" name="time" class="form-select">
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card"  data-court="The Edge ">
-      <img
-        src="{{ url_for('static', filename='TheEdge.jpg') }}"
-        class="card-img-top"
-        alt="The Edge "
-      />
-      <div class="card-body">
-        <h5 class="card-title">The Edge</h5>
-        <p class="card-text">Grass that feels like victory</p>
+      <div class="card" data-court="The Edge ">
+        <img src="{{ url_for('static', filename='TheEdge.jpg') }}" class="card-img-top" alt="The Edge " />
+        <div class="card-body">
+          <h5 class="card-title">The Edge</h5>
+          <p class="card-text">Grass that feels like victory</p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="The Edge " />
-          <input type="hidden" name="number" value="923390507050" />
-          <label for="time-select-The Edge">Select Time:</label>
-          <select id="time-select-The Edge" name="time" class="form-select">
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="The Edge " />
+            <input type="hidden" name="number" value="923390507050" />
+            <label for="time-select-The Edge">Select Time:</label>
+            <select id="time-select-The Edge" name="time" class="form-select">
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card" data-court="Sports Factory">
-      <img
-        src="{{ url_for('static', filename='SportsFactory.jpg') }}"
-        class="card-img-top"
-        alt="Sports Factory"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Sports Factory</h5>
-        <p class="card-text">Play hard, tread soft</p>
+      <div class="card" data-court="Sports Factory">
+        <img src="{{ url_for('static', filename='SportsFactory.jpg') }}" class="card-img-top" alt="Sports Factory" />
+        <div class="card-body">
+          <h5 class="card-title">Sports Factory</h5>
+          <p class="card-text">Play hard, tread soft</p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Sports Factory" />
-          <input type="hidden" name="number" value="923359277770" />
-          <label for="time-select-Sports Factory">Select Time:</label>
-          <select
-            id="time-select-Sports Factory"
-            name="time"
-            class="form-select"
-          >
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Sports Factory" />
+            <input type="hidden" name="number" value="923359277770" />
+            <label for="time-select-Sports Factory">Select Time:</label>
+            <select id="time-select-Sports Factory" name="time" class="form-select">
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card"  data-court="Dribbling Arena">
-      <img
-        src="{{ url_for('static', filename='DribblingArena.jpg') }}"
-        class="card-img-top"
-        alt="Dribbling Arena"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Dribbling Arena</h5>
-        <p class="card-text">Green dreams, golden games</p>
+      <div class="card" data-court="Dribbling Arena">
+        <img src="{{ url_for('static', filename='DribblingArena.jpg') }}" class="card-img-top" alt="Dribbling Arena" />
+        <div class="card-body">
+          <h5 class="card-title">Dribbling Arena</h5>
+          <p class="card-text">Green dreams, golden games</p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Dribbling Arena" />
-          <input type="hidden" name="number" value="923700028410" />
-          <label for="time-select-Dribbling Arena">Select Time:</label>
-          <select
-            id="time-select-Dribbling Arena"
-            name="time"
-            class="form-select"
-          >
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Dribbling Arena" />
+            <input type="hidden" name="number" value="923700028410" />
+            <label for="time-select-Dribbling Arena">Select Time:</label>
+            <select id="time-select-Dribbling Arena" name="time" class="form-select">
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card" data-court="The Legacy Court">
-      <img
-        src="{{ url_for('static', filename='LegacyCourt.jpg') }}"
-        class="card-img-top"
-        alt="The Legacy Court"
-      />
-      <div class="card-body">
-        <h5 class="card-title">The Legacy Court</h5>
-        <p class="card-text">Where the grass is greener, the game is greater</p>
+      <div class="card" data-court="The Legacy Court">
+        <img src="{{ url_for('static', filename='LegacyCourt.jpg') }}" class="card-img-top" alt="The Legacy Court" />
+        <div class="card-body">
+          <h5 class="card-title">The Legacy Court</h5>
+          <p class="card-text">Where the grass is greener, the game is greater</p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="The Legacy Court" />
-          <input type="hidden" name="number" value="923126628197" />
-          <label for="time-select-The Legacy Court">Select Time:</label>
-          <select
-            id="time-select-The Legacy Court"
-            name="time"
-            class="form-select"
-          >
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="The Legacy Court" />
+            <input type="hidden" name="number" value="923126628197" />
+            <label for="time-select-The Legacy Court">Select Time:</label>
+            <select id="time-select-The Legacy Court" name="time" class="form-select">
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card" data-court="Xtreme Sports">
-      <img
-        src="{{ url_for('static', filename='XtremeSports.jpg') }}"
-        class="card-img-top"
-        alt="Xtreme Sports"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Xtreme Sports</h5>
-        <p class="card-text">Grass that always in peak form</p>
+      <div class="card" data-court="Xtreme Sports">
+        <img src="{{ url_for('static', filename='XtremeSports.jpg') }}" class="card-img-top" alt="Xtreme Sports" />
+        <div class="card-body">
+          <h5 class="card-title">Xtreme Sports</h5>
+          <p class="card-text">Grass that always in peak form</p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Xtreme Sports" />
-          <input type="hidden" name="number" value="923072235656" />
-          <label for="time-select-Xtreme Sports">Select Time:</label>
-          <select
-            id="time-select-Xtreme Sports"
-            name="time"
-            class="form-select"
-          >
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Xtreme Sports" />
+            <input type="hidden" name="number" value="923072235656" />
+            <label for="time-select-Xtreme Sports">Select Time:</label>
+            <select id="time-select-Xtreme Sports" name="time" class="form-select">
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card"  data-court="Inswing Sports">
-      <img
-        src="{{ url_for('static', filename='Inswingsports.jpg') }}"
-        class="card-img-top"
-        alt="Inswing Sports"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Inswing Sports</h5>
-        <p class="card-text">Elevate your game on elite grass</p>
+      <div class="card" data-court="Inswing Sports">
+        <img src="{{ url_for('static', filename='Inswingsports.jpg') }}" class="card-img-top" alt="Inswing Sports" />
+        <div class="card-body">
+          <h5 class="card-title">Inswing Sports</h5>
+          <p class="card-text">Elevate your game on elite grass</p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Inswing Sports" />
-          <input type="hidden" name="number" value="923343062480" />
-          <label for="time-select-Inswing Sports">Select Time:</label>
-          <select
-            id="time-select-Inswing Sports"
-            name="time"
-            class="form-select"
-          >
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Inswing Sports" />
+            <input type="hidden" name="number" value="923343062480" />
+            <label for="time-select-Inswing Sports">Select Time:</label>
+            <select id="time-select-Inswing Sports" name="time" class="form-select">
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div
-      class="card"
-      
-      data-court="The NCG (North Community Ground)"
-    >
-      <img
-        src="{{ url_for('static', filename='NCG.jpg') }}"
-        class="card-img-top"
-        alt="The NCG (North Community Ground)"
-      />
-      <div class="card-body">
-        <h5 class="card-title">The NCG (North Community Ground)</h5>
-        <p class="card-text">A level field for limitless play</p>
+      <div class="card" data-court="The NCG (North Community Ground)">
+        <img src="{{ url_for('static', filename='NCG.jpg') }}" class="card-img-top"
+          alt="The NCG (North Community Ground)" />
+        <div class="card-body">
+          <h5 class="card-title">The NCG (North Community Ground)</h5>
+          <p class="card-text">A level field for limitless play</p>
 
-        <form action="/book" method="get">
-          <input
-            type="hidden"
-            name="court"
-            value="The NCG (North Community Ground)"
-          />
-          <input type="hidden" name="number" value="923000900269" />
-          <label for="time-select-The NCG (North Community Ground)"
-            >Select Time:</label
-          >
-          <select
-            id="time-select-The NCG (North Community Ground)"
-            name="time"
-            class="form-select"
-          >
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="The NCG (North Community Ground)" />
+            <input type="hidden" name="number" value="923000900269" />
+            <label for="time-select-The NCG (North Community Ground)">Select Time:</label>
+            <select id="time-select-The NCG (North Community Ground)" name="time" class="form-select">
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div
-      class="card"
-      
-      data-court="Battlefield by Sports Club"
-    >
-      <img
-        src="{{ url_for('static', filename='Battlefield.jpg') }}"
-        class="card-img-top"
-        alt="Battlefield by Sports Club"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Battlefield by Sports Club</h5>
-        <p class="card-text">Nature’s perfection, game’s foundation</p>
+      <div class="card" data-court="Battlefield by Sports Club">
+        <img src="{{ url_for('static', filename='Battlefield.jpg') }}" class="card-img-top"
+          alt="Battlefield by Sports Club" />
+        <div class="card-body">
+          <h5 class="card-title">Battlefield by Sports Club</h5>
+          <p class="card-text">Nature’s perfection, game’s foundation</p>
 
-        <form action="/book" method="get">
-          <input
-            type="hidden"
-            name="court"
-            value="Battlefield by Sports Club"
-          />
-          <input type="hidden" name="number" value="923193008828" />
-          <label for="time-select-Battlefield by Sports Club"
-            >Select Time:</label
-          >
-          <select
-            id="time-select-Battlefield by Sports Club"
-            name="time"
-            class="form-select"
-          >
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Battlefield by Sports Club" />
+            <input type="hidden" name="number" value="923193008828" />
+            <label for="time-select-Battlefield by Sports Club">Select Time:</label>
+            <select id="time-select-Battlefield by Sports Club" name="time" class="form-select">
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div
-      class="card"
-      
-      data-court="Champions Pavilion HPGS (Indoor Ground)"
-    >
-      <img
-        src="{{ url_for('static', filename='ChampionsPavillon.jpg') }}"
-        class="card-img-top"
-        alt="Champions Pavilion HPGS (Indoor Ground)"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Champions Pavilion HPGS (Indoor Ground)</h5>
-        <p class="card-text">Where every match feels monumental</p>
+      <div class="card" data-court="Champions Pavilion HPGS (Indoor Ground)">
+        <img src="{{ url_for('static', filename='ChampionsPavillon.jpg') }}" class="card-img-top"
+          alt="Champions Pavilion HPGS (Indoor Ground)" />
+        <div class="card-body">
+          <h5 class="card-title">Champions Pavilion HPGS (Indoor Ground)</h5>
+          <p class="card-text">Where every match feels monumental</p>
 
-        <form action="/book" method="get">
-          <input
-            type="hidden"
-            name="court"
-            value="Champions Pavilion HPGS (Indoor Ground)"
-          />
-          <input type="hidden" name="number" value="923090214747" />
-          <label for="time-select-Champions Pavilion HPGS (Indoor Ground)"
-            >Select Time:</label
-          >
-          <select
-            id="time-select-Champions Pavilion HPGS (Indoor Ground)"
-            name="time"
-            class="form-select"
-          >
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Champions Pavilion HPGS (Indoor Ground)" />
+            <input type="hidden" name="number" value="923090214747" />
+            <label for="time-select-Champions Pavilion HPGS (Indoor Ground)">Select Time:</label>
+            <select id="time-select-Champions Pavilion HPGS (Indoor Ground)" name="time" class="form-select">
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card"  data-court="The Ground">
-      <img
-        src="{{ url_for('static', filename='ground.jpeg') }}"
-        class="card-img-top"
-        alt="The Ground"
-      />
-      <div class="card-body">
-        <h5 class="card-title">The Ground</h5>
-        <p class="card-text">Immaculate grass for unbeatable games</p>
+      <div class="card" data-court="The Ground">
+        <img src="{{ url_for('static', filename='ground.jpeg') }}" class="card-img-top" alt="The Ground" />
+        <div class="card-body">
+          <h5 class="card-title">The Ground</h5>
+          <p class="card-text">Immaculate grass for unbeatable games</p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="The Ground" />
-          <input type="hidden" name="number" value="923423898153" />
-          <label for="time-select-The Ground">Select Time:</label>
-          <select id="time-select-The Ground" name="time" class="form-select">
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="The Ground" />
+            <input type="hidden" name="number" value="923423898153" />
+            <label for="time-select-The Ground">Select Time:</label>
+            <select id="time-select-The Ground" name="time" class="form-select">
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card"  data-court="The dugout">
-      <img
-        src="{{ url_for('static', filename='dugout.jpg') }}"
-        class="card-img-top"
-        alt="The dugout"
-      />
-      <div class="card-body">
-        <h5 class="card-title">The dugout</h5>
-        <p class="card-text">The ultimate court, the ultimate stage</p>
+      <div class="card" data-court="The dugout">
+        <img src="{{ url_for('static', filename='dugout.jpg') }}" class="card-img-top" alt="The dugout" />
+        <div class="card-body">
+          <h5 class="card-title">The dugout</h5>
+          <p class="card-text">The ultimate court, the ultimate stage</p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="The dugout" />
-          <input type="hidden" name="number" value="923270384688" />
-          <label for="time-select-The dugout">Select Time:</label>
-          <select id="time-select-The dugout" name="time" class="form-select">
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="The dugout" />
+            <input type="hidden" name="number" value="923270384688" />
+            <label for="time-select-The dugout">Select Time:</label>
+            <select id="time-select-The dugout" name="time" class="form-select">
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card"  data-court="Playdium Indoor">
-      <img
-        src="{{ url_for('static', filename='playdiumindoor.jpg') }}"
-        class="card-img-top"
-        alt="Playdium Indoor"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Playdium Indoor</h5>
-        <p class="card-text">Crafted for legends, built for all</p>
+      <div class="card" data-court="Playdium Indoor">
+        <img src="{{ url_for('static', filename='playdiumindoor.jpg') }}" class="card-img-top" alt="Playdium Indoor" />
+        <div class="card-body">
+          <h5 class="card-title">Playdium Indoor</h5>
+          <p class="card-text">Crafted for legends, built for all</p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Playdium Indoor" />
-          <input type="hidden" name="number" value="923361240246" />
-          <label for="time-select-Playdium Indoor">Select Time:</label>
-          <select
-            id="time-select-Playdium Indoor"
-            name="time"
-            class="form-select"
-          >
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Playdium Indoor" />
+            <input type="hidden" name="number" value="923361240246" />
+            <label for="time-select-Playdium Indoor">Select Time:</label>
+            <select id="time-select-Playdium Indoor" name="time" class="form-select">
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card"  data-court="Dreamers Arena">
-      <img
-        src="{{ url_for('static', filename='dreamer arena.PNG') }}"
-        class="card-img-top"
-        alt="Dreamers Arena"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Dreamers Arena</h5>
-        <p class="card-text">Play like a pro on a pro-level court</p>
+      <div class="card" data-court="Dreamers Arena">
+        <img src="{{ url_for('static', filename='dreamer arena.PNG') }}" class="card-img-top" alt="Dreamers Arena" />
+        <div class="card-body">
+          <h5 class="card-title">Dreamers Arena</h5>
+          <p class="card-text">Play like a pro on a pro-level court</p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Dreamers Arena" />
-          <input type="hidden" name="number" value="923327017017" />
-          <label for="time-select-Dreamers Arena">Select Time:</label>
-          <select
-            id="time-select-Dreamers Arena"
-            name="time"
-            class="form-select"
-          >
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Dreamers Arena" />
+            <input type="hidden" name="number" value="923327017017" />
+            <label for="time-select-Dreamers Arena">Select Time:</label>
+            <select id="time-select-Dreamers Arena" name="time" class="form-select">
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card"  data-court="Elixir Arena">
-      <img
-        src="{{ url_for('static', filename='Elixir.jpg') }}"
-        class="card-img-top"
-        alt="Elixir Arena"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Elixir Arena</h5>
-        <p class="card-text">Play like a pro on a pro-level court</p>
+      <div class="card" data-court="Elixir Arena">
+        <img src="{{ url_for('static', filename='Elixir.jpg') }}" class="card-img-top" alt="Elixir Arena" />
+        <div class="card-body">
+          <h5 class="card-title">Elixir Arena</h5>
+          <p class="card-text">Play like a pro on a pro-level court</p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Elixir Arena" />
-          <input type="hidden" name="number" value="923394120006" />
-          <label for="time-select-Elixir Arena">Select Time:</label>
-          <select id="time-select-Elixir Arena" name="time" class="form-select">
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Elixir Arena" />
+            <input type="hidden" name="number" value="923394120006" />
+            <label for="time-select-Elixir Arena">Select Time:</label>
+            <select id="time-select-Elixir Arena" name="time" class="form-select">
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card"  data-court="Midwicket">
-      <img
-        src="{{ url_for('static', filename='Midwicket.jpg') }}"
-        class="card-img-top"
-        alt="Midwicket"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Midwicket</h5>
-        <p class="card-text">
-          Echoes of hustle, heart, and hard-fought battles
-        </p>
+      <div class="card" data-court="Midwicket">
+        <img src="{{ url_for('static', filename='Midwicket.jpg') }}" class="card-img-top" alt="Midwicket" />
+        <div class="card-body">
+          <h5 class="card-title">Midwicket</h5>
+          <p class="card-text">
+            Echoes of hustle, heart, and hard-fought battles
+          </p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Midwicket" />
-          <input type="hidden" name="number" value="923451111464" />
-          <label for="time-select-Midwicket">Select Time:</label>
-          <select id="time-select-Midwicket" name="time" class="form-select">
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Midwicket" />
+            <input type="hidden" name="number" value="923451111464" />
+            <label for="time-select-Midwicket">Select Time:</label>
+            <select id="time-select-Midwicket" name="time" class="form-select">
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card"  data-court="Planet Arena">
-      <img
-        src="{{ url_for('static', filename='planetarena.jpg') }}"
-        class="card-img-top"
-        alt="Planet Arena"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Planet Arena</h5>
-        <p class="card-text">Dreams are dribbled, smashed, and spiked here</p>
+      <div class="card" data-court="Planet Arena">
+        <img src="{{ url_for('static', filename='planetarena.jpg') }}" class="card-img-top" alt="Planet Arena" />
+        <div class="card-body">
+          <h5 class="card-title">Planet Arena</h5>
+          <p class="card-text">Dreams are dribbled, smashed, and spiked here</p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Planet Arena" />
-          <input type="hidden" name="number" value="923120124125" />
-          <label for="time-select-Planet Arena">Select Time:</label>
-          <select id="time-select-Planet Arena" name="time" class="form-select">
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Planet Arena" />
+            <input type="hidden" name="number" value="923120124125" />
+            <label for="time-select-Planet Arena">Select Time:</label>
+            <select id="time-select-Planet Arena" name="time" class="form-select">
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card"  data-court="Urban Turf">
-      <img
-        src="{{ url_for('static', filename='UrbanTurf.jpg') }}"
-        class="card-img-top"
-        alt="Urban Turf"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Urban Turf</h5>
-        <p class="card-text">The place where precision meets perseverance</p>
+      <div class="card" data-court="Urban Turf">
+        <img src="{{ url_for('static', filename='UrbanTurf.jpg') }}" class="card-img-top" alt="Urban Turf" />
+        <div class="card-body">
+          <h5 class="card-title">Urban Turf</h5>
+          <p class="card-text">The place where precision meets perseverance</p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Urban Turf" />
-          <input type="hidden" name="number" value="923142551179" />
-          <label for="time-select-Urban Turf">Select Time:</label>
-          <select id="time-select-Urban Turf" name="time" class="form-select">
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Urban Turf" />
+            <input type="hidden" name="number" value="923142551179" />
+            <label for="time-select-Urban Turf">Select Time:</label>
+            <select id="time-select-Urban Turf" name="time" class="form-select">
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card" data-court="Velocity">
-      <img
-        src="{{ url_for('static', filename='velocity.jpg') }}"
-        class="card-img-top"
-        alt="Velocity"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Velocity</h5>
-        <p class="card-text">Inside this court, ordinary turns extraordinary</p>
+      <div class="card" data-court="Velocity">
+        <img src="{{ url_for('static', filename='velocity.jpg') }}" class="card-img-top" alt="Velocity" />
+        <div class="card-body">
+          <h5 class="card-title">Velocity</h5>
+          <p class="card-text">Inside this court, ordinary turns extraordinary</p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Velocity" />
-          <input type="hidden" name="number" value="923167090600" />
-          <label for="time-select-Velocity">Select Time:</label>
-          <select id="time-select-Velocity" name="time" class="form-select">
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Velocity" />
+            <input type="hidden" name="number" value="923167090600" />
+            <label for="time-select-Velocity">Select Time:</label>
+            <select id="time-select-Velocity" name="time" class="form-select">
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card" data-court="The Smash">
-      <img
-        src="{{ url_for('static', filename='smash.jpg') }}"
-        class="card-img-top"
-        alt="The Smash"
-      />
-      <div class="card-body">
-        <h5 class="card-title">The Smash</h5>
-        <p class="card-text">A masterpiece of turf and tenacity</p>
+      <div class="card" data-court="The Smash">
+        <img src="{{ url_for('static', filename='smash.jpg') }}" class="card-img-top" alt="The Smash" />
+        <div class="card-body">
+          <h5 class="card-title">The Smash</h5>
+          <p class="card-text">A masterpiece of turf and tenacity</p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="The Smash" />
-          <input type="hidden" name="number" value="923062515026" />
-          <label for="time-select-The Smash">Select Time:</label>
-          <select id="time-select-The Smash" name="time" class="form-select">
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="The Smash" />
+            <input type="hidden" name="number" value="923062515026" />
+            <label for="time-select-The Smash">Select Time:</label>
+            <select id="time-select-The Smash" name="time" class="form-select">
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="card" data-court="Legends Field">
-      <img
-        src="{{ url_for('static', filename='LegendsField.jpg') }}"
-        class="card-img-top"
-        alt="Legends Field"
-      />
-      <div class="card-body">
-        <h5 class="card-title">Legends Field</h5>
-        <p class="card-text">Sweat, strategy, and endless ambition</p>
+      <div class="card" data-court="Legends Field">
+        <img src="{{ url_for('static', filename='LegendsField.jpg') }}" class="card-img-top" alt="Legends Field" />
+        <div class="card-body">
+          <h5 class="card-title">Legends Field</h5>
+          <p class="card-text">Sweat, strategy, and endless ambition</p>
 
-        <form action="/book" method="get">
-          <input type="hidden" name="court" value="Legends Field" />
-          <input type="hidden" name="number" value="923008250767" />
-          <label for="time-select-Legends Field">Select Time:</label>
-          <select
-            id="time-select-Legends Field"
-            name="time"
-            class="form-select"
-          >
-            <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
-            <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
-            <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
-            <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Book Now</button>
-        </form>
+          <form action="/book" method="get">
+            <input type="hidden" name="court" value="Legends Field" />
+            <input type="hidden" name="number" value="923008250767" />
+            <label for="time-select-Legends Field">Select Time:</label>
+            <select id="time-select-Legends Field" name="time" class="form-select">
+              <option value="5:00 PM to 7:00 PM">5:00 PM to 7:00 PM</option>
+              <option value="7:00 PM to 9:00 PM">7:00 PM to 9:00 PM</option>
+              <option value="9:00 PM to 11:00 PM">9:00 PM to 11:00 PM</option>
+              <option value="11:00 PM to 1:00 AM">11:00 PM to 1:00 AM</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
       </div>
-    </div>
-  </body>
+</body>
+
 </html>
