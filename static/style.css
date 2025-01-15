@@ -161,7 +161,7 @@ label {
   height: inherit;
 }
 
-.gradient {
+.gradient {  
   font-family: "Bebas Neue", serif;
   font-weight: 400;
   font-style: normal;
@@ -170,6 +170,7 @@ label {
   background: linear-gradient(to right, #c21a2d  ,#4d0d06);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+
 }
 
 .sec-5 {
@@ -198,13 +199,20 @@ footer {
   }
 
   .gradient {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:"Bebas Neue", serif;
     font-size: 40px;
     font-weight: bold;
-    background: -webkit-linear-gradient(#eee, #333);
+   
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+}
+.con-abt-navbar{
+  background-image: linear-gradient(rgb(7, 7, 80),rgb(14, 14, 63));
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  width: 100%;
 }
 
 .loginbg {
@@ -212,9 +220,7 @@ footer {
 }
 
 .about-pic {
-  background: #003973;
-  background: -webkit-linear-gradient(to top, #e5e5be, #003973);
-  background: linear-gradient(to top, #e5e5be, #003973);
+  background-color: wheat;
   background-size: cover;
   padding-bottom: 200px;
 }
