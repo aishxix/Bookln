@@ -88,24 +88,10 @@ h1 {
 
 .card-body {
   padding: 16px;
-<<<<<<< HEAD
-  background: #83a4d4; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #b6fbff,
-    #83a4d4
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #b6fbff,
-    #83a4d4
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-=======
   background: green;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right,black,green);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right,black,green); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
->>>>>>> 5984769f64bb566415069fa2e0568b3850f3ff8f
 }
 label{
   color: white;
@@ -188,11 +174,7 @@ label {
   font-style: normal;
   font-size: 100px;
   align-content: center;
-<<<<<<< HEAD
-  background: linear-gradient(to right, #c21a2d, #4d0d06);
-=======
-  background: linear-gradient(to right, black,rgb(2, 83, 49));
->>>>>>> 5984769f64bb566415069fa2e0568b3850f3ff8f
+  background: linear-gradient(to right,black,rgb(5, 49, 70));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
