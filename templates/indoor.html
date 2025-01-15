@@ -51,31 +51,6 @@
         </div>
       </nav>
 
-      <div class="card" data-court="LEGENDS ARENA">
-        <img src="{{ url_for('static', filename='LEGENDSARENA.avif') }}" class="card-img-top" alt="LEGENDS ARENA" />
-        <div class="card-body">
-          <h5 class="card-title">LEGENDS ARENA</h5>
-          <p class="card-text">
-            One of the best court in Karachi<br />
-            Futsal,Football,Tenis,Badminton and Cricket
-          </p>
-
-          <form action="/book" method="get">
-            <input type="hidden" name="court" value="LEGENDS ARENA" />
-            <input type="hidden" name="number" value="923001127362" />
-            <label for="date-select">Select Date:</label>
-            <input type="date" id="date-select" name="date" class="form-control" required>
-            <label for="time-select-hasan">Select Time:</label>
-            <select id="time-select-hasan" name="time" class="form-select">
-              <option value="12:00 AM to 11:30 PM ">
-                12:00 AM to 11:30 PM
-              </option>
-            </select>
-            <button type="submit" class="btn btn-primary">Book Now</button>
-          </form>
-        </div>
-      </div>
-
       <div class="card" data-court="Power Hitters">
         <img src="{{ url_for('static', filename='PowerHitters.jpg') }}" class="card-img-top" alt="Power Hitters" />
         <div class="card-body">
@@ -158,31 +133,6 @@
         </div>
       </div>
 
-      <div class="card" data-court="Champions Pavilion HPGS">
-        <img src="{{ url_for('static', filename='HPGS.jpg') }}" class="card-img-top" alt="Champions Pavilion HPGS" />
-        <div class="card-body">
-          <h5 class="card-title">Champions Pavilion HPGS</h5>
-          <p class="card-text">
-            Immaculately maintained pitches for the perfect game and comfortable
-            grounds designed with players in mind
-          </p>
-
-          <form action="/book" method="get">
-            <input type="hidden" name="court" value="Champions Pavilion HPGS" />
-            <input type="hidden" name="number" value="923090214747" />
-                        <label for="date-select">Select Date:</label>
-            <input type="date" id="date-select" name="date" class="form-control" required>
-            <label for="time-select-raheem">Select Time:</label>
-            <select id="time-select-raheem" name="time" class="form-select">
-              <option value="7:00 PM to 1:00 AM">
-                7:00 AM to 1:00 AM
-              </option>
-            </select>
-            <button type="submit" class="btn btn-primary">Book Now</button>
-          </form>
-        </div>
-      </div>
-
       <div class="card" data-court="Powerplay">
         <img src="{{ url_for('static', filename='Powerplay.jpg') }}" class="card-img-top" alt="Power play" />
         <div class="card-body">
@@ -202,29 +152,6 @@
               <option value="7:00 AM to 1:00 AM">
                 7:00 AM to 1:00 AM
               </option>
-            </select>
-            <button type="submit" class="btn btn-primary">Book Now</button>
-          </form>
-        </div>
-      </div>
-
-      <div class="card" data-court="The Legacy Court">
-        <img src="{{ url_for('static', filename='The Legacy Court.jpg') }}" class="card-img-top"
-          alt="The Legacy Court" />
-        <div class="card-body">
-          <h5 class="card-title">The Legacy Court</h5>
-          <p class="card-text">
-            Multi Sports Arena in Gulshan & Scheme 33 Karachi.
-          </p>
-
-          <form action="/book" method="get">
-            <input type="hidden" name="court" value="The Legacy Court" />
-            <input type="hidden" name="number" value="92312 6628197" />
-                        <label for="date-select">Select Date:</label>
-            <input type="date" id="date-select" name="date" class="form-control" required>
-            <label for="time-select-raheem">Select Time:</label>
-            <select id="time-select-raheem" name="time" class="form-select">
-              <option value="7:00 AM to 7:00 AM">7:00 AM</option>
             </select>
             <button type="submit" class="btn btn-primary">Book Now</button>
           </form>
@@ -450,7 +377,7 @@
         <img src="{{ url_for('static', filename='sportswin.jpg') }}" class="card-img-top" alt="Sportswing" />
         <div class="card-body">
           <h5 class="card-title">SportSwing</h5>
-          <p class="card-text">.....Multi Sporting Venue......</p>
+          <p class="card-text">Multi Sporting Venue</p>
 
           <form action="/book" method="get">
             <input type="hidden" name="court" value="Sportwing" />
@@ -899,7 +826,7 @@
       <div class="card" data-court="The dugout">
         <img src="{{ url_for('static', filename='dugout.jpg') }}" class="card-img-top" alt="The dugout" />
         <div class="card-body">
-          <h5 class="card-title">The dugout</h5>
+          <h5 class="card-title">The Dugout</h5>
           <p class="card-text">The ultimate court, the ultimate stage</p>
 
           <form action="/book" method="get">
@@ -989,7 +916,7 @@
       </div>
 
       <div class="card" data-court="Midwicket">
-        <img src="{{ url_for('static', filename='Midwicket.jpg') }}" class="card-img-top" alt="Midwicket" />
+        <img src="{{ url_for('static', filename='midwickett.jpg') }}" class="card-img-top" alt="Midwicket" />
         <div class="card-body">
           <h5 class="card-title">Midwicket</h5>
           <p class="card-text">
@@ -1060,7 +987,7 @@
       </div>
 
       <div class="card" data-court="Velocity">
-        <img src="{{ url_for('static', filename='velocity.jpg') }}" class="card-img-top" alt="Velocity" />
+        <img src="{{ url_for('static', filename='velocityy.jpg') }}" class="card-img-top" alt="Velocity" />
         <div class="card-body">
           <h5 class="card-title">Velocity</h5>
           <p class="card-text">Inside this court, ordinary turns extraordinary</p>
@@ -1083,7 +1010,7 @@
       </div>
 
       <div class="card" data-court="The Smash">
-        <img src="{{ url_for('static', filename='smash.jpg') }}" class="card-img-top" alt="The Smash" />
+        <img src="{{ url_for('static', filename='smashh.jpg') }}" class="card-img-top" alt="The Smash" />
         <div class="card-body">
           <h5 class="card-title">The Smash</h5>
           <p class="card-text">A masterpiece of turf and tenacity</p>
@@ -1106,7 +1033,7 @@
       </div>
 
       <div class="card" data-court="Legends Field">
-        <img src="{{ url_for('static', filename='LegendsField.jpg') }}" class="card-img-top" alt="Legends Field" />
+        <img src="{{ url_for('static', filename='LF.jpg') }}" class="card-img-top" alt="Legends Field" />
         <div class="card-body">
           <h5 class="card-title">Legends Field</h5>
           <p class="card-text">Sweat, strategy, and endless ambition</p>
