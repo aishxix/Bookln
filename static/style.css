@@ -210,20 +210,13 @@ footer {
     -webkit-text-fill-color: transparent;
   }
 }
-.con-abt-navbar {
-  background-image: linear-gradient(rgb(7, 7, 80), rgb(14, 14, 63));
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 20px;
-  width: 100%;
-}
 
 .loginbg {
   background-color: wheat;
 }
 
 .about-pic {
-  background-color: wheat;
+  background-image:linear-gradient(to right, black, rgb(5, 49, 70));
   background-size: cover;
   padding-bottom: 200px;
 }
@@ -234,7 +227,7 @@ footer {
   text-decoration: none;
   margin-bottom: 0px;
   margin-top: 0px;
-  color: rgb(44, 44, 78);
+  color: rgb(86, 96, 187);
   font-size: 150px;
 }
 
