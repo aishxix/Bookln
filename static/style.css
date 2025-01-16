@@ -32,7 +32,13 @@ a {
   font-family: "Bebas Neue", serif;
   font-size: 23px;
 }
-
+.address-card{
+  width: 80%;
+  margin: auto;
+}
+.sub-sty{
+  min-height: 500px;
+}
 h1 {
   font-family: "Bebas Neue", serif;
   font-size: 50px;
