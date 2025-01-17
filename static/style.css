@@ -280,7 +280,7 @@ footer {
   width: 360px;
 }
 .indoor-bg {
-  background-image: linear-gradient(to right, black, rgb(1, 38, 48));
+  background-image: url(./images/bgindoor.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
