@@ -50,7 +50,7 @@ h1 {
 
 .loginbg {
   min-height: 100vh;
-  background-color: #222;
+color: wheat;
 }
 
 .loginbox {
@@ -161,6 +161,7 @@ section a {
   font-size: 15px;
   font-weight: lighter;
   margin: 20px;
+  color: #555;
 }
 
 .signup-link a {

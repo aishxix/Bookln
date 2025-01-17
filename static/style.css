@@ -127,7 +127,7 @@ h1 {
 
 .btn:hover {
   color: wheat;
-  background-color: rgb(56, 107, 44);
+  background-color: rgb(70, 146, 52);
   cursor: pointer;
 }
 
@@ -183,7 +183,7 @@ label {
 }
 
 .sec-5 {
-  background-image: linear-gradient(rgb(76, 206, 64), black);
+  background-image: linear-gradient(rgb(44, 121, 54), black);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -219,12 +219,12 @@ footer {
 .alr-acc-a
 {color: black;}
 
-.loginbg {
-  background-image: url(./images/bgindoor.jpeg);
+.loginbg{
+  min-height: 100vh;
+  background-color: wheat;
 }
-
 .about-pic {
-  background-image:url(./images/bgindoor.jpeg);
+  background-image:linear-gradient(to right,black,rgb(1, 38, 44));
   background-size: cover;
   padding-bottom: 200px;
 }
@@ -235,7 +235,7 @@ footer {
   text-decoration: none;
   margin-bottom: 0px;
   margin-top: 0px;
-  color: rgb(86, 96, 187);
+  color: rgb(33, 91, 109);
   font-size: 150px;
 }
 
@@ -282,7 +282,7 @@ footer {
   width: 360px;
 }
 .indoor-bg {
-  background-image: url(./images/bgindoor.jpeg);
+  background-image: linear-gradient(to right,black,rgb(1, 38, 44));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -297,6 +297,7 @@ footer {
 }
 .cont-head {
   margin: 5px;
+color: rgb(33, 91, 109);
 }
 .heading {
   text-align: center;
