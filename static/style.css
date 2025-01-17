@@ -216,13 +216,15 @@ footer {
     -webkit-text-fill-color: transparent;
   }
 }
+.alr-acc-a
+{color: black;}
 
 .loginbg {
-  background-color: wheat;
+  background-image: url(./images/bgindoor.jpeg);
 }
 
 .about-pic {
-  background-image:linear-gradient(to right, black, rgb(5, 49, 70));
+  background-image:url(./images/bgindoor.jpeg);
   background-size: cover;
   padding-bottom: 200px;
 }
