@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Indoor Grounds</title>
-
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -33,9 +33,6 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="{{url_for('about')}}"><span>About Us</span></a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="{{url_for('indoor')}}"><span>Indoor Courts</span></a>
               </li>
               <li>
@@ -43,6 +40,9 @@
               </li>
               <li>
                 <a class="nav-link" href="{{url_for('signup')}}"><span>Signup</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="{{url_for('about')}}"><span>About Us</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{url_for('contact')}}"><span>Contact Us</span></a>
@@ -1147,7 +1147,7 @@
       <div class="card" data-court="Sportskingdom">
         <img src="{{ url_for('static', filename='images/zsportskingdom.jpg') }}" class="card-img-top" alt="Sportskingdom" />
         <div class="card-body">
-          <h5 class="card-title">Sportskingdom</h5>
+          <h5 class="card-title">Sports Kingdom</h5>
           <p class="carad-text">Catchy Indoor</p>
           <form action="/book" method="get">
             <input type="hidden" name="court" value="Sportskingdom" />
@@ -1433,6 +1433,7 @@
 
       <div class="card" data-court="Play Max">
         <img src="{{ url_for('static', filename='images/xplaymax.jpg') }}" class="card-img-top" alt="Play Max" />
+        <div class="card-body">
           <h5 class="card-title">Play Max</h5>
           <p class="carad-text">Face Hardships and play like a warrior</p>
           <form action="/book" method="get">
@@ -1454,6 +1455,7 @@
 
       <div class="card" data-court="PIPS Sports Arena">
         <img src="{{ url_for('static', filename='images/xpip.jpg') }}" class="card-img-top" alt="PIPS Sports Arena" />
+        <div class="card-body">
           <h5 class="card-title">PIPS Sports Arena</h5>
           <p class="carad-text">Your Are Champion</p>
           <form action="/book" method="get">
@@ -1475,6 +1477,7 @@
 
       <div class="card" data-court="Starla Sports">
         <img src="{{ url_for('static', filename='images/xstarla.jpg') }}" class="card-img-top" alt="Starla Sports" />
+        <div class="card-body">
           <h5 class="card-title">Starla Sports</h5>
           <p class="carad-text">Court Vision</p>
           <form action="/book" method="get">
