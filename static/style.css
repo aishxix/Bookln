@@ -265,17 +265,20 @@ footer {
   text-align: center;
   height: 400px;
   width: 750px;
+  
 }
 .glassparent {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(to right, black, rgb(1, 38, 44));
 }
 .contcontainer {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 60px;
+  background-image: linear-gradient(to right, black, rgb(1, 38, 44));
 }
 .contpara {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
