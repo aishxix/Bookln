@@ -349,3 +349,24 @@ footer {
   border-color: #aaa;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+@media screen and (max-width: 600px) {
+  .about {
+    padding-top: 150px;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: rgb(33, 91, 109);
+    font-size: 80px;
+  }
+  
+  .abt-p {
+    color: black;
+    font-size: 16px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    padding-top: 70px;
+  }
+    
+}  
+  
