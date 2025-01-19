@@ -357,16 +357,45 @@ footer {
     margin-bottom: 0px;
     margin-top: 0px;
     color: rgb(33, 91, 109);
-    font-size: 80px;
+    font-size: 50px;
   }
   
   .abt-p {
     color: black;
-    font-size: 16px;
+    font-size: 13px;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
     padding-top: 70px;
   }
-    
+
+  .cnctcard {
+    position: relative;
+    background-color: rgba(225, 225, 225, 0.5);
+    border: 1px solid rgb(170, 164, 164);
+    border-radius: 30px;
+    height: 400px;
+    width: 200px;
+  }
+  .contlinks img {
+    width: 20px;
+    border-radius: 30px;
+    margin: 5px 10px;
+    transition: 0.5s;
+    padding-bottom: 30px;
+  }      
+  
+.linksparent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+}
+.heading {
+  font-size: 30px;
+}
+.contpara {
+  font-size: 17px;
+}
 }  
   
