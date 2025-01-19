@@ -163,6 +163,9 @@ section a {
   margin: 20px;
   color: #555;
 }
+#login-header{
+  color: rgb(7, 7, 80);
+}
 
 .signup-link a {
   color: rgb(208, 93, 11);

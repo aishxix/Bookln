@@ -51,6 +51,10 @@ a {
   width: 100%;
 }
 
+
+.alr-acc-a {
+  color: black;
+ }
 .header-content {
   margin-top: 10px;
   display: flex;
