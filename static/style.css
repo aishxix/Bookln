@@ -19,9 +19,7 @@ a {
 }
 .sec-btn {
   background-image: linear-gradient(
-    rgb(7, 36, 7),
-    rgb(4, 19, 4),
-    rgb(7, 37, 7)
+  to right,rgb(0, 0, 0),rgb(0, 30, 31)
   );
   color: #000000;
 }
