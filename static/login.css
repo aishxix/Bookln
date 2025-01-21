@@ -187,8 +187,9 @@ section a {
  
 .loginbg {
   min-height: 100vh;
-color: wheat;
-width: 415px;
+
+width: 435px;
+padding-bottom: 30px;
 }
 
 .input-box .input-field {
