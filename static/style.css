@@ -161,9 +161,18 @@ label {
 
 .bgmain {
   background-image: url("./images/tester2.jpeg");
-  background-size: cover;
+  background-size: cover; /* Add this line */
+  background-attachment: fixed;
+  background-position: center; /* Add this line */
+  height: 100vh; /* Add this line */
   background-repeat: no-repeat;
+}
+body {
+  background-image: url("./images/tester2.jpeg");
+  background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .div {
@@ -191,7 +200,6 @@ label {
 }
 
 .sec-5 {
-  background-image: linear-gradient(rgb(44, 121, 54), black);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -265,7 +273,6 @@ footer {
   text-align: center;
   height: 400px;
   width: 750px;
-  
 }
 .glassparent {
   display: flex;
@@ -359,7 +366,7 @@ footer {
     color: rgb(33, 91, 109);
     font-size: 50px;
   }
-  
+
   .abt-p {
     color: black;
     font-size: 13px;
@@ -382,20 +389,35 @@ footer {
     margin: 5px 10px;
     transition: 0.5s;
     padding-bottom: 30px;
-  }      
-  
-.linksparent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
+  }
 
+  .linksparent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .heading {
+    font-size: 30px;
+  }
+  .contpara {
+    font-size: 17px;
+  }
 }
-.heading {
-  font-size: 30px;
+/* style.css */
+
+.div {
+  animation: animate 2s infinite;
 }
-.contpara {
-  font-size: 17px;
+
+@keyframes animate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-}  
-  
