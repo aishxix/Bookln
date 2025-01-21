@@ -16,7 +16,24 @@ a {
   color: #fff;
   text-decoration: none;
   transition: color 0.5s;
+
 }
+li:hover{
+  background: black;
+  transform: scale(0.9);
+}
+
+li{
+  text-align: center;
+  background-color: #0e0d0d;
+  border-radius: 15px;
+  width: 150px;
+  height: 50px;
+  margin-right: 5px;
+  padding: 5px;
+  transition: 0.3s ease-in-out;  
+}
+
 .sec-btn {
   background-image: linear-gradient(
     rgb(7, 36, 7),
@@ -248,14 +265,14 @@ footer {
 }
 
 .about {
-  padding-top: 150px;
+  padding-top: 30px;
   text-align: center;
   text-decoration: none;
   margin-bottom: 0px;
   margin-top: 0px;
   color: rgb(33, 91, 109);
-  font-size: 150px;
-}
+  font-size: 130px;
+} 
 
 .abt {
   padding-top: 100px;
@@ -264,6 +281,7 @@ footer {
   text-align: center;
   color: rgb(184, 138, 22);
 }
+/* 
 .glasscont {
   margin-top: 50px;
   margin-bottom: auto;
@@ -271,15 +289,15 @@ footer {
   border: 1px solid rgb(187, 182, 182);
   border-radius: 40px;
   text-align: center;
-  height: 400px;
-  width: 750px;
+  height: auto;
+  width: auto;
 }
 .glassparent {
   display: flex;
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(to right, black, rgb(1, 38, 44));
-}
+} */
 .contcontainer {
   display: flex;
   justify-content: center;
@@ -290,6 +308,7 @@ footer {
 .contpara {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
+  font-weight: bolder;
   font-size: 20px;
   color: #000000;
 }
@@ -313,17 +332,28 @@ footer {
   font-size: 23px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+    font-weight: bolder;
   padding-top: 70px;
 }
 .cont-head {
   margin: 5px;
   color: rgb(33, 91, 109);
 }
+.contus-head{ 
+  padding-top: 150px;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  color: rgb(33, 91, 109);
+  font-size: 150px;
+
+}
 .heading {
   text-align: center;
   font-size: 45px;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  color: rgb(59, 59, 59);
+  color: rgb(32, 31, 31);
 }
 
 .contlinks img {
@@ -420,4 +450,24 @@ footer {
   100% {
     transform: scale(1);
   }
+}
+
+.glassparent{
+  background: url(./images/back3.jpg) no-repeat left;
+  background-size: 55%;
+  background-color: rgb(53, 52, 52);
+  overflow: hidden;
+  padding: 100px 0 ;
+  display: flex;
+  align-items: right;
+  justify-content: right;
+
+}
+.glasscont{
+
+  width: auto;
+  float: right;
+  background-color: rgb(235, 230, 230);
+  padding: 100px;
+
 }
