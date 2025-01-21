@@ -165,16 +165,11 @@ label {
 }
 
 .bgmain {
-<<<<<<< HEAD
-  background-image: url("./images/main.jpeg");
-  background-size: cover;
-=======
   background-image: url("./images/tester2.jpeg");
   background-size: cover; /* Add this line */
   background-attachment: fixed;
   background-position: center; /* Add this line */
   height: 100vh; /* Add this line */
->>>>>>> 6c0ced01b2f3cf7201ae82e9d958f3194f99e32d
   background-repeat: no-repeat;
 }
 body {
@@ -212,10 +207,6 @@ body {
 }
 
 .sec-5 {
-<<<<<<< HEAD
-  background-color: black;
-=======
->>>>>>> 6c0ced01b2f3cf7201ae82e9d958f3194f99e32d
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
