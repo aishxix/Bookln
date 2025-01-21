@@ -12,7 +12,7 @@ span {
 }
 
 a {
-  color: #fff;
+  color:#fff;
   text-decoration: none;
   transition: color 0.5s;
 }
@@ -33,11 +33,14 @@ h1 {
 }
 
 .navbar {
-  background-image: linear-gradient(rgb(7, 7, 80), rgb(14, 14, 63));
+  background-image: linear-gradient(transparent);
   display: flex;
   justify-content: space-between;
   padding: 15px 20px;
   width: 100%;
+}
+.paras{
+  color: wheat;
 }
 
 .header-content {
@@ -50,7 +53,7 @@ h1 {
 
 .loginbg {
   min-height: 100vh;
-color: wheat;
+background-image: url(./images/main.jpeg);
 }
 
 .loginbox {
@@ -164,7 +167,7 @@ section a {
   color: #555;
 }
 #login-header{
-  color: rgb(7, 7, 80);
+  color: rgb(221, 221, 230);
 }
 
 .signup-link a {
@@ -181,7 +184,7 @@ section a {
  
 .loginbg {
   min-height: 100vh;
-color: wheat;
+
 width: 415px;
 }
 
