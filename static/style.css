@@ -25,9 +25,11 @@ to right,rgb(5, 73, 73),rgb(0, 23, 29)  );
   color: #000000;
 }
 .home-p {
-  margin-bottom: 60px;
-  color:rgb(68, 169, 209);
+  margin-top: 0px;
+  margin-bottom: 20px;
+  color:rgb(255, 255, 255);
   font-weight: bold;
+  gap: 20px;
 }
 .nav-a {
   font-family: "Bebas Neue", serif;
@@ -127,7 +129,7 @@ h1 {
   height: 60px;
   align-items: center;
   border: none;
-  background-image: linear-gradient(to right,rgb(10, 65, 75),rgb(0, 31, 29));
+  background-color: black;
   color: white;
   font-weight: bolder;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -136,11 +138,12 @@ h1 {
   transition: 0.5s ease-in-out;
   cursor: pointer;
   margin-bottom: 200px;
+  margin-top: 0px;
 }
 
 .btn:hover {
   color: wheat;
-  background-color: rgb(28, 181, 192);
+  background-color: rgb(6, 54, 58);
   cursor: pointer;
 }
 
@@ -194,16 +197,17 @@ body {
 }
 
 .gradient {
-  margin-top: 100px;
+  
   font-family: "Bebas Neue", serif;
   font-weight: 400;
   padding-top: 200px;
   padding-bottom: 200px;
-  font-size: 350px;
+  font-size: 120px;
   align-content: center;
-  background: linear-gradient(to right, rgb(90, 170, 182), rgb(0, 12, 17));
+  background: linear-gradient(to right, rgb(0, 11, 14), rgb(5, 42, 58));
   -webkit-text-fill-color: transparent;
   background-clip: text;
+margin-bottom: 0px;
 }
 
 .sec-5 {
