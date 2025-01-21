@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
 
 * {
- 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -25,7 +24,7 @@ h1 {
 }
 
 .S-head {
-  color:rgb(225, 238, 240);
+  color:rgb(10, 10, 75);
   font-size: 50px;
   font-weight: bolder;
 }
@@ -45,18 +44,16 @@ a {
 }
 
 .navbar {
-  background-image: linear-gradient(transparent);
+  background-image: linear-gradient(rgb(7, 7, 80),rgb(14, 14, 63));
   display: flex;
   justify-content: space-between;
   padding: 15px 20px;
   width: 100%;
 }
 
-.signupbg{
-background-image: url(./images/main.jpeg);
-}
+
 .alr-acc-a {
-  color: wheat;
+  color: black;
  }
 .header-content {
   margin-top: 10px;
