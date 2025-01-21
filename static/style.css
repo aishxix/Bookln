@@ -15,8 +15,9 @@ span {
 }
 
 span:hover{
-  background-image:linear-gradient(to right,rgb(0, 170, 182),rgb(0, 184, 150));
+  background-image:linear-gradient(transparent);
   color: rgb(255, 255, 255);
+  
   border: none;
   padding: 5px 10px;
   border-radius: 10px;
