@@ -23,8 +23,17 @@ h1 {
   transition: color 0.3s;
 }
 
+.loginbg {
+  min-height: 100vh;
+background-image: url(./images/loginsign.jpeg);
+background-size: cover; /* Add this line */
+background-attachment: fixed;
+background-position: center;
+
+}
+
 .S-head {
-  color:rgb(10, 10, 75);
+  color:black;
   font-size: 50px;
   font-weight: bolder;
 }
@@ -44,7 +53,7 @@ a {
 }
 
 .navbar {
-  background-image: linear-gradient(rgb(7, 7, 80),rgb(14, 14, 63));
+  background-image: linear-gradient(transparent);
   display: flex;
   justify-content: space-between;
   padding: 15px 20px;
@@ -53,7 +62,7 @@ a {
 
 
 .alr-acc-a {
-  color: black;
+  color:wheat;
  }
 .header-content {
   margin-top: 10px;
@@ -111,7 +120,7 @@ a {
   height: 60px;
   align-items: center;
   border: none;
-  background-image: linear-gradient(rgb(7, 7, 80),rgb(14, 14, 63));
+  background-image: linear-gradient(rgb(0, 0, 0),rgb(0, 36, 41));
   color: white;
   font-weight: bolder;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
