@@ -16,14 +16,13 @@ a {
   color: #fff;
   text-decoration: none;
   transition: color 0.5s;
-
 }
-li:hover{
+li:hover {
   background: black;
   transform: scale(0.9);
 }
 
-li{
+li {
   text-align: center;
   background-color: #161515;
   border-radius: 15px;
@@ -31,13 +30,11 @@ li{
   height: 50px;
   margin-right: 5px;
   padding: 5px;
-  transition: 0.3s ease-in-out;  
+  transition: 0.3s ease-in-out;
 }
 
 .sec-btn {
-  background-image: linear-gradient(
-  to right,rgb(15, 15, 15),rgb(0, 30, 31)
-  );
+  background-image: linear-gradient(to right, rgb(15, 15, 15), rgb(0, 30, 31));
   color: #000000;
 }
 .home-p {
@@ -247,7 +244,6 @@ footer {
   color: black;
 }
 
-
 .about-pic {
   background-image: linear-gradient(to right, black, rgb(1, 38, 44));
   background-size: cover;
@@ -263,7 +259,7 @@ footer {
   margin-top: 0px;
   color: rgb(33, 91, 109);
   font-size: 130px;
-} 
+}
 
 .abt {
   padding-top: 100px;
@@ -320,17 +316,17 @@ footer {
 }
 .abt-p {
   color: black;
-  font-size: 23px;
+  font-size: 25px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-    font-weight: bolder;
+  font-weight: bolder;
   padding-top: 70px;
 }
 .cont-head {
   margin: 5px;
   color: rgb(33, 91, 109);
 }
-.contus-head{ 
+.contus-head {
   padding-top: 150px;
   text-align: center;
   text-decoration: none;
@@ -338,7 +334,6 @@ footer {
   margin-top: 0px;
   color: rgb(33, 91, 109);
   font-size: 100px;
-
 }
 .heading {
   text-align: center;
@@ -353,14 +348,13 @@ footer {
   margin: 10px 20px;
   transition: 0.5s;
 }
-.con-bg{
+.con-bg {
   background-image: url(images/indoorpic.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  padding-bottom: 50px;
-
+  height: 100vh;
 }
 .contlinks img:hover {
   background-color: rgb(145, 145, 214);
@@ -396,7 +390,7 @@ footer {
     color: rgb(33, 91, 109);
     font-size: 50px;
   }
-  .con-bg{
+  .con-bg {
     padding-bottom: 210px;
   }
   .abt-p {
@@ -468,22 +462,19 @@ footer {
   }
 }
 
-.glassparent{
+.glassparent {
   background: url(./images/back3.jpg) no-repeat left;
   background-size: 55%;
   background-color: rgb(53, 52, 52);
   overflow: hidden;
-  padding: 100px 0 ;
+  padding: 100px 0;
   display: flex;
   align-items: right;
   justify-content: right;
-
 }
-.glasscont{
-
+.glasscont {
   width: auto;
   float: right;
   background-color: rgb(235, 230, 230);
   padding: 100px;
-
 }
